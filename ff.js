@@ -216,6 +216,9 @@ const foo161 = () => {
     b1.parentNode.removeChild(b1);
     b2.parentNode.removeChild(b2);
     b3.parentNode.removeChild(b3);
+    finb.addEventListener('click', function () {
+      table.parentNode.removeChild(table);
+    });
 }, 1300);
 };
 const foo162 = () => {
@@ -249,6 +252,9 @@ const foo162 = () => {
     b1.parentNode.removeChild(b1);
     b2.parentNode.removeChild(b2);
     b3.parentNode.removeChild(b3);
+    finb.addEventListener('click', function () {
+      table.parentNode.removeChild(table);
+    });
   }, 1300);
 };
 
