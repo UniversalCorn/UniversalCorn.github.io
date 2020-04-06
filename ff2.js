@@ -17,7 +17,7 @@ const figure = document.getElementsByTagName('figure')[0];
 const x = (window.innerWidth / 2) - (figure.offsetWidth / 2) + 'px';
 const y = (window.innerHeight / 3) - (figure.offsetHeight / 2) + 'px';
 figure.style.position = 'absolute';
-figure.style.left = x;
+figure.style.left = x - (window.innerWidth / 10);
 figure.style.top = y;
 
 const figcap = document.getElementsByTagName('figcaption')[0];
@@ -25,8 +25,8 @@ const image = document.getElementsByTagName('img')[0];
 
 const list = document.getElementsByTagName('ul')[0];
 list.style.position = 'absolute';
-list.style.left = '65%';//(window.innerWidth / 2) - (list.offsetWidth / 2) + 'px';
-list.style.top = '10%';//window.innerHeight / 1.5 + 'px';
+list.style.left = '75%';//(window.innerWidth / 2) - (list.offsetWidth / 2) + 'px';
+list.style.top = '5%';//window.innerHeight / 1.5 + 'px';
 for (let i = 0; i < 3; i++) {
   document.getElementsByTagName('li')[i].style.display = 'block';
 }
