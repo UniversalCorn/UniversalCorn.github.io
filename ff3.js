@@ -1,5 +1,29 @@
 'use strict';
 
+setInterval( function () {
+  checkViewport();
+}, 1);
+
+function checkViewport() {
+  if (window.innerWidth < window.innerHeight) {
+   document.body.removeChild(figure);
+   document.body.removeChild(list);
+   const msg = document.createElement('div');
+   document.body.appendChild(msg);
+   msg.style.width = (window.innerWidth * 0.4) + 'px';
+   msg.style.height = (window.innerWidth * 0.25) + 'px';
+   msg.style.position = 'absolute';
+   msg.style.left = '50%';
+   msg.style.top = '50%';
+   msg.style.transform = 'translate(-50% -50%)';
+   msg.style.background = 'rgba(0, 256, 256, 0.4)';
+   msg.innerText = 'Пожалуйста, переверни телефон/планшет';
+   setTimeout (function reloadPage() {
+      location.reload(true);
+    }, 4000);
+  }
+}
+
 const pics = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg',
   '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg',
   '16.jpg', '17.jpg'];
@@ -19,7 +43,6 @@ const y = (window.innerHeight/2) - (figure.offsetHeight / 3) + 'px';
 figure.style.width = (window.innerWidth * 0.4) + 'px';
 figure.style.height = (window.innerWidth * 0.25) + 'px';
 figure.style.position = 'absolute';
-//figure.style.left = x;
 figure.style.top = y;
 
 const figcap = document.getElementsByTagName('figcaption')[0];
@@ -30,7 +53,6 @@ image.style.height = '100%';
 
 const list = document.getElementsByTagName('ul')[0];
 list.style.position = 'absolute';
-//list.style.left = (window.innerWidth / 2) - (list.offsetWidth*4.18) + 'px';
 list.style.top = window.innerHeight / 1.4 + 'px';
 
 for (let i = 0; i < 3; i++) {
@@ -55,7 +77,7 @@ const change = (str1, str2, str3, im, imstr, br, bw1, bw2) => {
   bw1.style.background = 'red';
   bw2.style.background = 'red';
   figcap.innerText = imstr;
-  figcap.style.background = 'rgba(50, 250, 50, 0.4)';//'#2e8b57';
+  figcap.style.background = 'rgba(0, 256, 256, 0.4)';
   for (let i = 0; i < 3; i++) {
     document.getElementsByTagName('button')[i].setAttribute('disabled', '');
     document.getElementsByTagName('button')[i].style.color = 'black';
