@@ -40,25 +40,4 @@ button {
 ::-webkit-scrollbar {
   display: none;
 }
-/*.pict {
-	filter: grayscale(100%);
-	width: 270px;
-	height: 180px;
-}
 
-.pict:hover {	
-	filter:none;
-	transition: 1s;
-}
-
-figure {
-	float: left;
-	background: #2cb334;
-	padding: 10px;
-	margin: 0px 10px 10px 0px;
-	text-align: center;
-}
-
-figcaption {
-	font-size: 20px;
-}*/
