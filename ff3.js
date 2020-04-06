@@ -10,13 +10,17 @@ function checkViewport() {
    document.body.removeChild(list);
    const msg = document.createElement('div');
    document.body.appendChild(msg);
-   msg.style.width = (window.innerWidth * 0.4) + 'px';
+
+   const msgY = (window.innerHeight/ 2) - (msg.offsetHeight / 2) + 'px';
+
+   msg.style.width = '40%';
    msg.style.height = (window.innerWidth * 0.25) + 'px';
    msg.style.position = 'absolute';
-   msg.style.left = '50%';
-   msg.style.top = '50%';
-   msg.style.transform = 'translate(-50% -50%)';
-   msg.style.background = 'rgba(0, 256, 256, 0.4)';
+   msg.style.left = '30%';
+   msg.style.top = msgY;
+   //msg.style.transform = 'translate(-50% -50%)';
+   msg.style.background = 'rgba(256, 20, 20, 0.6)';
+   msg.style.color = 'white';
    msg.innerText = 'Пожалуйста, переверни телефон/планшет';
    setTimeout (function reloadPage() {
       location.reload(true);
