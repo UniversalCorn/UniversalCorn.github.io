@@ -19,7 +19,7 @@ const y = (window.innerHeight/2) - (figure.offsetHeight / 3) + 'px';
 figure.style.width = (window.innerWidth * 0.4) + 'px';
 figure.style.height = (window.innerWidth * 0.25) + 'px';
 figure.style.position = 'absolute';
-figure.style.left = x;
+//figure.style.left = x;
 figure.style.top = y;
 
 const figcap = document.getElementsByTagName('figcaption')[0];
@@ -30,7 +30,7 @@ image.style.height = '100%';
 
 const list = document.getElementsByTagName('ul')[0];
 list.style.position = 'absolute';
-list.style.left = (window.innerWidth / 2) - (list.offsetWidth*4.18) + 'px';
+//list.style.left = (window.innerWidth / 2) - (list.offsetWidth*4.18) + 'px';
 list.style.top = window.innerHeight / 1.4 + 'px';
 
 for (let i = 0; i < 3; i++) {
