@@ -26,7 +26,7 @@ const image = document.getElementsByTagName('img')[0];
 const list = document.getElementsByTagName('ul')[0];
 list.style.position = 'absolute';
 list.style.left = '45%';//(window.innerWidth / 2) - (list.offsetWidth / 2) + 'px';
-list.style.top = '10%';window.innerHeight / 1.5 + 'px';
+list.style.top = '10%';//window.innerHeight / 1.5 + 'px';
 for (let i = 0; i < 3; i++) {
   document.getElementsByTagName('li')[i].style.display = 'block';
 }
