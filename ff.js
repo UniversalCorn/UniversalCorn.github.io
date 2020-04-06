@@ -12,6 +12,7 @@ let count = 0;
 
 document.body.style.backgroundImage = 'background1.jpg'
 document.body.style.backgroundSize = 'cover';
+document.body.style.backgroundRepeat = 'no-repeat';
 
 const figure = document.getElementsByTagName('figure')[0];
 const x = (window.innerWidth / 2) - (figure.offsetWidth / 2) + 'px';
