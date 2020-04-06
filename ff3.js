@@ -35,7 +35,7 @@ list.style.top = window.innerHeight / 1.4 + 'px';
 
 for (let i = 0; i < 3; i++) {
   document.getElementsByTagName('button')[i].style.width = (window.innerWidth * 0.09) + 'px';
-  document.getElementsByTagName('button')[i].style.height = (window.innerWidth * 0.0375) + 'px';
+  document.getElementsByTagName('button')[i].style.height = (window.innerWidth * 0.0375 * 2) + 'px';
   document.getElementsByTagName('button')[i].style.margin = `${(window.innerWidth * 0.03)}px ${(window.innerWidth * 0.03)}px`;
 }
 
