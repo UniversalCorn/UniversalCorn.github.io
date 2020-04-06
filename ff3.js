@@ -24,7 +24,7 @@ function checkViewport() {
    msg.innerText = 'Пожалуйста, переверни телефон/планшет';
    setTimeout (function reloadPage() {
       location.reload(true);
-    }, 4000);
+    }, 1000);
   }
 }
 
