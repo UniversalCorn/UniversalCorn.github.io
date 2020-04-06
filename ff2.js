@@ -17,8 +17,8 @@ const figure = document.getElementsByTagName('figure')[0];
 const x = (window.innerWidth / 2) - (figure.offsetWidth / 2) + 'px';
 const y = (window.innerHeight / 3) - (figure.offsetHeight / 2) + 'px';
 figure.style.position = 'absolute';
-figure.style.left = '3%';//x;
-figure.style.top = '2%';//y;
+figure.style.left = x;
+figure.style.top = y;
 
 const figcap = document.getElementsByTagName('figcaption')[0];
 const image = document.getElementsByTagName('img')[0];
