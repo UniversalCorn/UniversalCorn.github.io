@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Цель </title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+		const timeend = new Date('September 1, 2021 00:00:00 GMT+02:00');
+
+		function time() {
+			let today = new Date();
+			let dif = Math.floor((timeend-today)/1000);
+
+			let backImg = ['https://drive.google.com/uc?id=1sr1QsMIl_Rko_RfvVJ50M71wGj383X37', 'https://drive.google.com/uc?id=1sfLHvVovxe9fTvf9U1L8kDEO6iUktmh-', 'https://drive.google.com/uc?id=1sGt6TStUTL3k4nbomXH-ixPnowyhNO4q', 'https://drive.google.com/uc?id=1sQnoSBGWQpNqcV8_jaVm2L37K5bBCDkb', 'https://drive.google.com/uc?id=1sQsnrQ5EpEt0lr_VENhx1IVHifYj51Vs', 'https://drive.google.com/uc?id=1sRJO6VHBJYt-TDnpfo5yt4c8yCQhtm19', 'https://drive.google.com/uc?id=1sacR86IDo-xOH1i6wLkasSzoRUVQR0uc', 'https://drive.google.com/uc?id=1sd9x5qikc7wDgSw_oKT2yQ_ZlvTr0AyP', 'https://drive.google.com/uc?id=1s95rdhglvebHqHGIYTnq53ZSweLHGoGZ', 'https://drive.google.com/uc?id=1s5T3bDY8iHudiTQw3pQtA4ResxkL2beA', 'https://drive.google.com/uc?id=1s1tRt6LVSxuVicHe0UAAvZVWfCzaENIK', 'https://drive.google.com/uc?id=1rvYw43_Y71ygbcGnjdsGD10XCfIkEjO_', 'https://drive.google.com/uc?id=1ru1yl7crjatMpPMgLJD5dZXFDNhgUtmq', 'https://drive.google.com/uc?id=1rnHW8Gjw0OtNJixpV_4mGYo7ceZM_ycp', 'https://drive.google.com/uc?id=1rlUS8Xi5S0TSOVQmunwADnYP6V8n-VEL', 'https://drive.google.com/uc?id=1rkKHZwhdi8XLYLKZJM635AkbxDhv13CP', 'https://drive.google.com/uc?id=1rhkueFEgwyRRz8ut1iR6BRrJiuXFlSlW', 'https://drive.google.com/uc?id=1rYM1LFJwi2Gh56206LmbJZ1ebfAOjzNr', 'https://drive.google.com/uc?id=1sw2nxJWVg1gkoR-IizvnVpmH9Z0PY8MU'];
+			console.log(backImg[0]);
+			let day = today.getDate();
+			let body = document.getElementsByTagName('body')[0];
+			body.style.backgroundImage = 'url('+backImg[day % backImg.length]+')';
+			console.log(body.style.backgroundImage);
+			
+			let seconds = dif;
+			let minutes = Math.floor(dif/60);
+			let hours = Math.floor(minutes/60);
+			let days = Math.floor(hours/24);
+
+			document.getElementById('days').innerHTML = days + ( (days % 10 == 1) ? ' День' : ( (days % 10 == 2 || days % 10 == 3 || days % 10 == 4 ) ?  ' Дня' : ' Дней') );
+			document.getElementById('hours').innerHTML = hours + ( (hours % 10 == 1) ? ' Час' : ( (hours % 10 == 2 || hours % 10 == 3 || hours % 10 == 4 ) ?  ' Часа' : ' Часов') );
+			document.getElementById('minutes').innerHTML = minutes + ( (minutes % 10 == 1) ? ' Минута' : ( (minutes % 10 == 2 || minutes % 10 == 3 || minutes % 10 == 4 ) ?  ' Минуты' : ' Минут') );
+			document.getElementById('seconds').innerHTML = dif + ( (dif % 10 == 1) ? ' Секунда' : ( (dif % 10 == 2 || dif % 10 == 3 || dif % 10 == 4 ) ?  ' Секунды' : ' Секунд') );
+
+			window.setTimeout("time()",1000);
+
+		}
+
+
+		</script>
+		<style>
+			body {
+				color: white;
+				-webkit-text-stroke-width: 3px;
+				-webkit-text-stroke-color: black;
+				position: relative;
+				text-align: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+
+			span {
+				font-size: 100px;
+			}
+
+			ul {
+				  list-style-type: none;
+			}
+
+			li {
+				margin-top: 20%;
+				margin-bottom: 20%;
+
+			}
+
+			div {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body onload="time()">
+		<ul>
+			<li><span id='days'></span></li> 
+			<li><span id='hours'></span></li> 
+			<li><span id='minutes'> </span></li> 
+			<li><span id='seconds'></span></li> 
+		</ul>
+	</body>
+</html>
