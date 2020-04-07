@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'antimatrixmedium';
+    src: url('antimatrix-bwbvw-webfont.woff2') format('woff2'),
+         url('antimatrix-bwbvw-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

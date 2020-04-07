@@ -1,0 +1,21 @@
+ body {
+ 	background-color: black;
+ 	font-family: 'antimatrixmedium', Arial, sans-serif;
+ 	color: #20C20E;
+ 	font-size: 1.5rem; 
+    writing-mode: vertical-lr; 
+    text-orientation: upright;
+    position: fixed;
+ }
+
+ @font-face {
+    font-family: 'antimatrixmedium';
+    src: url('antimatrix-bwbvw-webfont.woff2') format('woff2'),
+         url('antimatrix-bwbvw-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
