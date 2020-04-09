@@ -10,21 +10,32 @@ container.style.background = 'lightpink';
 let headliner = document.getElementById('headliner');
 headliner.style.left = -headliner.offsetWidth + 'px';
 headliner.style.top = window.innerHeight/2 - headliner.offsetHeight/2 + 'px';
+headliner.style.height = '40%';
 
 
 setTimeout( function() {
 		moveInner();	
 }, 2000 + (window.innerWidth/2 + headliner.offsetWidth/2) /2);
 
-let start = Date.now()
-let timer = setInterval(function() {
-	let timePassed = Date.now() - start;	
-	if ( (Number((headliner.style.left).slice(0, -2))) > ( (window.innerWidth/2) - (headliner.offsetWidth/2))  ) {
-		clearInterval(timer);
-		return;
-	}
-	draw(timePassed);
-}, 20);
+function moveOuter() {
+	let start = Date.now()
+	let timer = setInterval(function() {
+		let timePassed = Date.now() - start;	
+		if ( (Number((headliner.style.left).slice(0, -2))) > ( (window.innerWidth/2) - (headliner.offsetWidth/2))  ) {
+			clearInterval(timer);
+			return;
+		}
+		draw(timePassed);
+	}, 20);
+	setInterval(function() {
+		if (window.innerWidth < window.innerHeight) {
+			headliner.style.width = '60%';
+			headliner.style.background = 'rgba(256, 64, 64, 0.7)';
+		}
+	}, 0);
+}
+
+moveOuter();
 
 function moveInner() {
 	let innerStart = Date.now();
