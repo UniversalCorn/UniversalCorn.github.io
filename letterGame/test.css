@@ -1,0 +1,33 @@
+html,body { 
+	margin: 0; 
+	padding: 0; 
+	height: 100%; 
+	width: 100%;
+}
+
+body {
+	position: fixed;
+	overflow: auto;
+	background-attachment: fixed;
+	background-size: cover;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.letter {
+	display: none;
+}
+
+#play {
+	position: fixed;
+	width: 25vw;
+	left: 37.5%;
+	top: 25%;
+/*	transform: translate(50% 50%);*/
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
