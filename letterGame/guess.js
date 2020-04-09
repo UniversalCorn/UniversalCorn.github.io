@@ -21,6 +21,17 @@ let ratio = {
 
 }
 
+let close = document.getElementById('close');
+close.style.position = 'absolute';
+close.style.right = '1vw';
+close.style.top = '1vw';
+close.style.width = '3vw'
+close.style.height = '3vw';
+close.onmouseover = mouseOver(close);
+close.addEventListener('click', function() {
+	window.location.href = 'main.html';
+})
+
   let container = document.getElementById('container');
   container.style.background = 'lightpink';
 
