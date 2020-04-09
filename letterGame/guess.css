@@ -7,6 +7,7 @@ html,body {
 
 body {
 	position: relative;
+	font-size: 2rem;
 }
 
 #container {
