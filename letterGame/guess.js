@@ -30,7 +30,7 @@ close.style.height = '3vw';
 close.onmouseover = mouseOver(close);
 close.addEventListener('click', function() {
 	window.location.href = 'main.html';
-})
+});
 
   let container = document.getElementById('container');
   container.style.background = 'lightpink';
