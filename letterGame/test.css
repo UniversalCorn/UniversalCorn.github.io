@@ -11,7 +11,7 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
 }
@@ -23,9 +23,6 @@ body {
 #play {
 	position: fixed;
 	width: 25vw;
-	left: 37.5%;
-	top: 25%;
-/*	transform: translate(50% 50%);*/
 }
 
 ::-webkit-scrollbar {
