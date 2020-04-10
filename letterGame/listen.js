@@ -9,13 +9,6 @@ const sounds = ['a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3',
 let rand = back[Math.floor(Math.random() * (back.length - 1))]
 let randVert = backVert[Math.floor(Math.random() * (backVert.length - 1))]
 
-if (window.innerWidth < window.innerHeight) {
-	document.body.style.backgroundImage = `url(${randVert})`;
-}
-else {
-	document.body.style.backgroundImage = `url(${rand})`;
-}
-
 setInterval( function() {
 	if (window.innerWidth < window.innerHeight) {
 		document.body.style.backgroundImage = `url(${randVert})`;
@@ -23,7 +16,7 @@ setInterval( function() {
 	else {
 		document.body.style.backgroundImage = `url(${rand})`;
 	}
-}, 3000);
+}, 0);
 
 let audioStart = new Audio();
 audioStart.preload = 'auto';
