@@ -11,7 +11,7 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
