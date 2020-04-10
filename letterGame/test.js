@@ -27,11 +27,15 @@ const relation = [ ['a.mp3', 'а.png'], ['b.mp3', 'б.png'], ['v.mp3', 'в.png']
 let rand = back[Math.floor(Math.random() * (back.length - 1))]
 let randVert = backVert[Math.floor(Math.random() * (backVert.length - 1))]
 
+
+
+setInterval(function() {
 if (window.innerWidth < window.innerHeight) {
 		for (let i = 0; i < 33; i++) {
 			document.getElementsByClassName('letter')[i].style.width = '20vw';
 		}
 		document.body.style.backgroundImage = `url(${randVert})`;
+		document.body.style.flexDirection = 'column';
 	}
 	else {
 		for (let i = 0; i < 33; i++) {
@@ -39,6 +43,7 @@ if (window.innerWidth < window.innerHeight) {
 		}
 		document.body.style.backgroundImage = `url(${rand})`;
 	}
+}, 0)
 
 setInterval( function() {
 	if (window.innerWidth < window.innerHeight) {
@@ -174,9 +179,6 @@ function Question() {
 		}*/
 		}
 		rememberMas.push(wrong);
-		console.log(right);
-		console.log(wrong);
-		console.log(rememberMas);
 	}
 }
 
