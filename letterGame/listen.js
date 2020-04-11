@@ -3,19 +3,47 @@ const sounds = ['a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3',
  'yy.mp3', 'myag.mp3', 'e.mp3', 'yu.mp3', 'ya.mp3'];
  
  let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
- let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
+let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
+let scrollColor = '';
+let rand = Math.floor(Math.random() * back.length);
+let randBack = back[rand];
+let randVertBack = backVert[rand];
 
-let rand = back[Math.floor(Math.random() * (back.length - 1))]
-let randVert = backVert[Math.floor(Math.random() * (backVert.length - 1))]
+if (rand === 0) {
+	document.body.setAttribute('class', 'first');
+}
+else if (rand === 1) {
+	document.body.setAttribute('class', 'second');
+}
+else if (rand === 2) {
+	document.body.setAttribute('class', 'third');
+}
+else {
+	document.body.setAttribute('class', 'fourth');
+}
+
 
 setInterval( function() {
 	if (window.innerWidth < window.innerHeight) {
-		document.body.style.backgroundImage = `url(${randVert})`;
+		document.body.style.backgroundImage = `url(${randVertBack})`;
 	}
 	else {
-		document.body.style.backgroundImage = `url(${rand})`;
+		document.body.style.backgroundImage = `url(${randBack})`;
 	}
+
+	if (window.innerWidth < window.innerHeight/1.5) {
+		for (let i = 0; i < 33; i++) {
+			document.getElementsByTagName('img')[i].style.transform = 'scale(1.2)';
+		}
+	}
+
+	else {
+		for (let i = 0; i < 33; i++) {
+			document.getElementsByTagName('img')[i].style.transform = 'scale(1)';
+		}
+	}
+
 }, 0);
 
 let audioStart = new Audio();
