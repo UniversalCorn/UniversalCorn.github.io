@@ -91,7 +91,7 @@ setInterval(function() {
 
 	else {
 		for (let i = 0; i < 3; i++) {
-			document.getElementsByTagName('img')[i].style.transform = 'scale(1)';
+			document.getElementsByTagName('img')[i].style.transform = 'scale(1.2)';
 		}
 	}
 }, 0);
