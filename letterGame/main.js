@@ -1,11 +1,27 @@
 const links = ['listen.html', 'test.html', 'guess.html'];
 
+let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
+let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
+
+let scrollColor = '';
+let rand = Math.floor(Math.random() * back.length);
+let randBack = back[rand];
+let randVertBack = backVert[rand];
+
+let container = document.getElementById('container');
+
+setInterval(function() {
+	if (window.innerWidth < window.innerHeight) {
+		container.style.backgroundImage = `url(${randVertBack})`;
+	}
+	else {
+		container.style.backgroundImage = `url(${randBack})`;
+	}
+}, 0)
+
 let pic1 = document.getElementsByTagName('img')[0];
 let pic2 = document.getElementsByTagName('img')[1];
 let pic3 = document.getElementsByTagName('img')[2];
-
-let container = document.getElementById('container');
-container.style.background = 'lightpink';
 
 let headliner = document.getElementById('headliner');
 headliner.style.left = -headliner.offsetWidth + 'px';
@@ -26,11 +42,12 @@ function moveOuter() {
 			return;
 		}
 		draw(timePassed);
-	}, 20);
+	}, 10);
 	setInterval(function() {
 		if (window.innerWidth < window.innerHeight) {
 			headliner.style.width = '60%';
 			headliner.style.background = 'rgba(256, 64, 64, 0.7)';
+			document.body.style.fontSize = '1 rem';
 		}
 	}, 0);
 }
@@ -47,7 +64,7 @@ function moveInner() {
 			return;
 		}
 		drawInner(innerTimePassed);
-	}, 20);
+	}, 10);
 }
 
 function draw(timePassed) {
@@ -65,6 +82,18 @@ setInterval(function() {
 	}
 	else {
 		container.style.flexDirection = 'row';
+	}
+
+	if (window.innerWidth < window.innerHeight/1.5) {
+		for (let i = 0; i < 3; i++) {
+			document.getElementsByTagName('img')[i].style.transform = 'scale(2)';
+		}
+	}
+
+	else {
+		for (let i = 0; i < 3; i++) {
+			document.getElementsByTagName('img')[i].style.transform = 'scale(1)';
+		}
 	}
 }, 0);
 
