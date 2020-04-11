@@ -142,6 +142,7 @@ function Question() {
 			getBack.style.position = 'relative';
 			getBack.style.width = '40%';
 			getBack.style.height = getBack.style.width + 'px';
+			getBack.style.top = '25%';
 
 			getBack.addEventListener('click', function() {
 				window.location.href = 'main.html';
