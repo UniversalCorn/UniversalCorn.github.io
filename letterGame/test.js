@@ -28,37 +28,35 @@ let rand = back[Math.floor(Math.random() * (back.length - 1))]
 let randVert = backVert[Math.floor(Math.random() * (backVert.length - 1))]
 
 
-
 setInterval(function() {
-if (window.innerWidth < window.innerHeight) {
-		for (let i = 0; i < 33; i++) {
-			document.getElementsByClassName('letter')[i].style.width = '20vw';
-		}
-		document.body.style.backgroundImage = `url(${randVert})`;
-		document.body.style.flexDirection = 'column';
+	for (let i = 0; i < 33; i++) {
+		document.getElementsByClassName('letter')[i].style.transform = 'scale(1.3)';
 	}
-	else {
-		for (let i = 0; i < 33; i++) {
-			document.getElementsByClassName('letter')[i].style.width = '10vw';
-		}
-		document.body.style.backgroundImage = `url(${rand})`;
-	}
-}, 0)
-
-setInterval( function() {
 	if (window.innerWidth < window.innerHeight) {
 		for (let i = 0; i < 33; i++) {
-			document.getElementsByClassName('letter')[i].style.width = '20vw';
+			if (document.getElementsByClassName('letter')[i].offsetTop + document.getElementsByClassName('letter')[i].offsetHeight*1.2 > window.innerHeight) {
+				for (let j = 0; j < 33; j++) {
+					document.body.style.justifyContent = 'space-around';
+					document.getElementsByClassName('letter')[j].style.width = '15vw';
+				}
+			}
+			else {
+				for (let j = 0; j < 33; j++) {
+					document.getElementsByClassName('letter')[j].style.width = '20vw';
+					document.body.style.justifyContent = 'space-around';
+				}
+			}
 		}
 		document.body.style.backgroundImage = `url(${randVert})`;
 	}
 	else {
 		for (let i = 0; i < 33; i++) {
-			document.getElementsByClassName('letter')[i].style.width = '10vw';
+			document.getElementsByClassName('letter')[i].style.width = '12vw';
+			document.body.style.justifyContent = 'center';
 		}
 		document.body.style.backgroundImage = `url(${rand})`;
 	}
-}, 3000);
+}, 1)
 
 let audioStart = new Audio();
 audioStart.preload = 'auto';
@@ -101,7 +99,6 @@ let rightSum = 0;
 let wrongSum = 0;
 function Question() {
 	if (picsAmount === 0) { 
-		console.log(rememberMas);
 		rememberMas = rememberMas.map((val, i) => (i!=0 && val==rememberMas[i-1]) ? 0 : 1 );
 		wrongSum = rememberMas.reduce((acc, val) => acc + val, 0)
 		rightSum = right;
@@ -109,13 +106,27 @@ function Question() {
 		setTimeout( function() {
 			let panel = document.createElement('div');
 			document.body.appendChild(panel);
-			panel.style.width = '30%';
-			panel.style.height = '30%';
+			panel.style.width = '67vw';
+			panel.style.height = '67vw';
 			panel.style.textAlign = 'center';
+			panel.style.fontSize = '7vw';
 			document.body.style.justifyContent = 'center';
-			panel.innerText = `Ты набрала ${points} очков.`;
+			panel.innerText = `Ты набрал(а) ${points}`;
+			if (points % 100 === 11) {
+				panel.innerText += ` очков.`;
+			}
+			else if ((points % 10 === 1) && (points % 100 !== 11)) {
+				panel.innerText += ` очко.`;
+			}
+			else if ( (points % 10 === 2) || (points % 10 === 3) || (points % 10 === 4) ) {
+				panel.innerText += ` очка.`;
+			}
+			else if ( (points % 10 === 5) || (points % 10 === 6) || (points % 10 === 7) || (points % 10 === 8) || (points % 10 === 9) || (points % 10 === 0)) {
+				panel.innerText += ` очков.`;
+			}
+			
 			if (points <= 0) {
-				panel.innerText += ` Тренируйся ещё`
+				panel.innerText += ` Тренируйся ещё.`
 				panel.style.background = 'rgba(250, 50, 50, 0.5)';
 			}
 			else {
@@ -150,33 +161,28 @@ function Question() {
 		let j = 0;
 		for (let i = 0; i < 33; i++) {
 			j++;
-		if (document.getElementsByTagName('img')[i].src.replace(/^.*[\\\/]/, '') === (rememberSound.substring(0, rememberSound.length - 3) + 'png')) {
-			document.getElementsByTagName('img')[i].addEventListener('click', function() {
-				document.getElementsByTagName('img')[i].style.background = 'rgba(50, 250, 50, 0.5)';
-				right+=1;
-				wrong = wrong - (33 - picsAmount);
-				picsAmount--;
-				setTimeout( function() {
-					document.getElementsByTagName('img')[i].style.display = 'none';
-				}, 1000);
-				setTimeout( function() {
-					Question();
-				}, 2000);
-			});
-		}
-		else { document.getElementsByTagName('img')[i].addEventListener('click', function() {
-				document.getElementsByTagName('img')[i].style.background = 'rgba(250, 50, 50, 0.5)';
-				wrong = wrong + 1;
-				setTimeout( function() {
-					document.getElementsByTagName('img')[i].style.background = 'transparent';
-				}, 1000);
-			});
-		}
-		
-		/*if (picsAmount < 20) {
-			document.getElementsByTagName('img')[i].style.width  = Number(document.getElementsByTagName('img')[i].style.width.substring(0, document.getElementsByTagName('img')[i].style.width.length - 2)) * 2 + 'vw';
-			console.log(document.getElementsByTagName('img')[i].style.width);
-		}*/
+			if (document.getElementsByTagName('img')[i].src.replace(/^.*[\\\/]/, '') === (rememberSound.substring(0, rememberSound.length - 3) + 'png')) {
+				document.getElementsByTagName('img')[i].addEventListener('click', function() {
+					document.getElementsByTagName('img')[i].style.background = 'rgba(50, 250, 50, 0.5)';
+					right+=1;
+					wrong = wrong - (33 - picsAmount);
+					picsAmount--;
+					setTimeout( function() {
+						document.getElementsByTagName('img')[i].style.display = 'none';
+					}, 500);
+					setTimeout( function() {
+						Question();
+					}, 1000);
+				});
+			}
+			else { document.getElementsByTagName('img')[i].addEventListener('click', function() {
+					document.getElementsByTagName('img')[i].style.background = 'rgba(250, 50, 50, 0.5)';
+					wrong = wrong + 1;
+					setTimeout( function() {
+						document.getElementsByTagName('img')[i].style.background = 'transparent';
+					}, 500);
+				});
+			}
 		}
 		rememberMas.push(wrong);
 	}
@@ -224,7 +230,6 @@ const playB = document.getElementsByTagName('img')[33];
 playB.onmouseover = mouseOver(playB);
 playB.onmouseout = mouseOut(playB);
 playB.onmousedown = playButton();
-playB.style.left = (window.innerWidth/2) - (playB.offsetWidth/2);
 
 
 а.onmouseover = mouseOver(а);
