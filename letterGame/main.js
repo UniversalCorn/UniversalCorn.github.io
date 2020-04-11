@@ -3,7 +3,6 @@ const links = ['listen.html', 'test.html', 'guess.html'];
 let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
-let scrollColor = '';
 let rand = Math.floor(Math.random() * back.length);
 let randBack = back[rand];
 let randVertBack = backVert[rand];
