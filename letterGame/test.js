@@ -24,8 +24,8 @@ const relation = [ ['a.mp3', 'а.png'], ['b.mp3', 'б.png'], ['v.mp3', 'в.png']
  let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
 
-let rand = back[Math.floor(Math.random() * (back.length - 1))]
-let randVert = backVert[Math.floor(Math.random() * (backVert.length - 1))]
+let rand = back[Math.floor(Math.random() * back.length)]
+let randVert = backVert[Math.floor(Math.random() * backVert.length)]
 
 
 setInterval(function() {
