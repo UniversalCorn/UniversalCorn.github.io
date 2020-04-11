@@ -32,6 +32,74 @@ body {
 	top: 200vw;
 }
 
-::-webkit-scrollbar {
-  display: none;
+
+body::-webkit-scrollbar {
+  width: 1.5vw;
+}
+
+.first::-webkit-scrollbar-track {
+  background: rgba(27, 62, 100, 0.3); 
+}
+ 
+.first::-webkit-scrollbar-thumb {
+  background: rgba(27, 62, 100, 0.5); 
+  border-radius: 5vw;
+  border: 1px solid white;
+}
+
+.first::-webkit-scrollbar-thumb:hover {
+  background: rgba(27, 62, 100, 1); 
+  border-radius: 5vw;
+  border: 1px solid white;
+}
+
+
+.second::-webkit-scrollbar-track {
+  background: rgba(246, 182, 208, 0.3); 
+}
+
+.second::-webkit-scrollbar-thumb {
+  background: rgba(246, 182, 208, 0.5); 
+  border-radius: 5vw;
+  border: 1px solid white;
+}
+
+.second::-webkit-scrollbar-thumb:hover {
+  background: rgba(246, 182, 208, 1); 
+  border-radius: 5vw;
+  border: 1px solid white;
+}
+
+
+.third::-webkit-scrollbar-track {
+  background: rgba(101, 204, 237, 0.3); 
+}
+ 
+.third::-webkit-scrollbar-thumb {
+  background: rgba(101, 204, 237, 0.5); 
+  border-radius: 5vw;
+  border: 1px solid white;
+}
+
+.third::-webkit-scrollbar-thumb:hover {
+  background: rgba(101, 204, 237, 1); 
+  border-radius: 5vw;
+  border: 1px solid white;
+}
+
+
+.fourth::-webkit-scrollbar-track {
+  background: rgba(122, 145, 159, 0.3); 
+}
+ 
+.fourth::-webkit-scrollbar-thumb {
+  background: rgba(122, 145, 159, 0.5); 
+  border-radius: 5vw;
+  border: 1px solid white;
+}
+
+.fourth::-webkit-scrollbar-thumb:hover {
+  background: rgba(122, 145, 159, 1);
+  border-radius: 5vw; 
+  border: 1px solid white;
 }
