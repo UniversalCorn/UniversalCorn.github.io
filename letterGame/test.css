@@ -7,7 +7,6 @@ html,body {
 
 body {
 	position: fixed;
-	overflow: auto;
 	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
