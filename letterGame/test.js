@@ -24,8 +24,9 @@ const relation = [ ['a.mp3', 'а.png'], ['b.mp3', 'б.png'], ['v.mp3', 'в.png']
  let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
 
-let rand = back[Math.floor(Math.random() * back.length)]
-let randVert = backVert[Math.floor(Math.random() * backVert.length)]
+let rand = Math.floor(Math.random() * back.length);
+let randBack = back[rand];
+let randVertBack = backVert[rand];
 
 
 setInterval(function() {
@@ -47,14 +48,14 @@ setInterval(function() {
 				}
 			}
 		}
-		document.body.style.backgroundImage = `url(${randVert})`;
+		document.body.style.backgroundImage = `url(${randVertBack})`;
 	}
 	else {
 		for (let i = 0; i < 33; i++) {
 			document.getElementsByClassName('letter')[i].style.width = '12vw';
 			document.body.style.justifyContent = 'center';
 		}
-		document.body.style.backgroundImage = `url(${rand})`;
+		document.body.style.backgroundImage = `url(${randBack})`;
 	}
 }, 1)
 
