@@ -78,18 +78,6 @@ function playButton() {
 	}
 }
 
-function mouseOver (target) {
-	return function() {
-		target.style.cursor = 'pointer';
-	}
-}
-
-function mouseOut (target) {
-	return function() {
-		target.style.cursor = 'default';
-	}
-}
-
 
 let letterSound = new Audio();
 audioStart.preload = 'auto';
@@ -126,7 +114,7 @@ function Question() {
 				panel.innerText += ` очков.`;
 			}
 			
-			if (points <= 0) {
+			if (points <= 1) {
 				panel.innerText += ` Тренируйся ещё.`
 				panel.style.background = 'rgba(250, 50, 50, 0.5)';
 			}
@@ -138,7 +126,6 @@ function Question() {
 			panel.appendChild(br);
 			let getBack = document.createElement('img');
 			panel.appendChild(getBack);
-			getBack.onmouseover = mouseOver(getBack);
 			getBack.src = 'back.png'
 			getBack.style.position = 'relative';
 			getBack.style.width = '40%';
@@ -191,114 +178,5 @@ function Question() {
 }
 
 
-
-
-const а = document.getElementsByTagName('img')[0];
-const б = document.getElementsByTagName('img')[1];
-const в = document.getElementsByTagName('img')[2];
-const г = document.getElementsByTagName('img')[3];
-const д = document.getElementsByTagName('img')[4];
-const е = document.getElementsByTagName('img')[5];
-const ё = document.getElementsByTagName('img')[6];
-const ж = document.getElementsByTagName('img')[7];
-const з = document.getElementsByTagName('img')[8];
-const и = document.getElementsByTagName('img')[9];
-const й = document.getElementsByTagName('img')[10];
-const к = document.getElementsByTagName('img')[11];
-const л = document.getElementsByTagName('img')[12];
-const м = document.getElementsByTagName('img')[13];
-const н = document.getElementsByTagName('img')[14];
-const о = document.getElementsByTagName('img')[15];
-const п = document.getElementsByTagName('img')[16];
-const р = document.getElementsByTagName('img')[17];
-const с = document.getElementsByTagName('img')[18];
-const т = document.getElementsByTagName('img')[19];
-const у = document.getElementsByTagName('img')[20];
-const ф = document.getElementsByTagName('img')[21];
-const х = document.getElementsByTagName('img')[22];
-const ц = document.getElementsByTagName('img')[23];
-const ч = document.getElementsByTagName('img')[24];
-const ш = document.getElementsByTagName('img')[25];
-const щ = document.getElementsByTagName('img')[26];
-const ъ = document.getElementsByTagName('img')[27];
-const ы = document.getElementsByTagName('img')[28];
-const ь = document.getElementsByTagName('img')[29];
-const э = document.getElementsByTagName('img')[31];
-const ю = document.getElementsByTagName('img')[32];
-const я = document.getElementsByTagName('img')[33];
-
-
 const playB = document.getElementsByTagName('img')[33];
-playB.onmouseover = mouseOver(playB);
-playB.onmouseout = mouseOut(playB);
 playB.onmousedown = playButton();
-
-
-а.onmouseover = mouseOver(а);
-б.onmouseover = mouseOver(б);
-в.onmouseover = mouseOver(в);
-г.onmouseover = mouseOver(г);
-д.onmouseover = mouseOver(д);
-е.onmouseover = mouseOver(е);
-ё.onmouseover = mouseOver(ё);
-ж.onmouseover = mouseOver(ж);
-з.onmouseover = mouseOver(з);
-и.onmouseover = mouseOver(и);
-й.onmouseover = mouseOver(й);
-к.onmouseover = mouseOver(к);
-л.onmouseover = mouseOver(л);
-м.onmouseover = mouseOver(м);
-н.onmouseover = mouseOver(н);
-о.onmouseover = mouseOver(о);
-п.onmouseover = mouseOver(п);
-р.onmouseover = mouseOver(р);
-с.onmouseover = mouseOver(с);
-т.onmouseover = mouseOver(т);
-у.onmouseover = mouseOver(у);
-ф.onmouseover = mouseOver(ф);
-х.onmouseover = mouseOver(х);
-ц.onmouseover = mouseOver(ц);
-ч.onmouseover = mouseOver(ч);
-ш.onmouseover = mouseOver(ш);
-щ.onmouseover = mouseOver(щ);
-ъ.onmouseover = mouseOver(ъ);
-ы.onmouseover = mouseOver(ы);
-ь.onmouseover = mouseOver(ь);
-э.onmouseover = mouseOver(э);
-ю.onmouseover = mouseOver(ю);
-я.onmouseover = mouseOver(я);
-
-
-а.onmouseout = mouseOut(а);
-б.onmouseout = mouseOut(б);
-в.onmouseout = mouseOut(в);
-г.onmouseout = mouseOut(г);
-д.onmouseout = mouseOut(д);
-е.onmouseout = mouseOut(е);
-ё.onmouseout = mouseOut(ё);
-ж.onmouseout = mouseOut(ж);
-з.onmouseout = mouseOut(з);
-и.onmouseout = mouseOut(и);
-й.onmouseout = mouseOut(й);
-к.onmouseout = mouseOut(к);
-л.onmouseout = mouseOut(л);
-м.onmouseout = mouseOut(м);
-н.onmouseout = mouseOut(н);
-о.onmouseout = mouseOut(о);
-п.onmouseout = mouseOut(п);
-р.onmouseout = mouseOut(р);
-с.onmouseout = mouseOut(с);
-т.onmouseout = mouseOut(т);
-у.onmouseout = mouseOut(у);
-ф.onmouseout = mouseOut(ф);
-х.onmouseout = mouseOut(х);
-ц.onmouseout = mouseOut(ц);
-ч.onmouseout = mouseOut(ч);
-ш.onmouseout = mouseOut(ш);
-щ.onmouseout = mouseOut(щ);
-ъ.onmouseout = mouseOut(ъ);
-ы.onmouseout = mouseOut(ы);
-ь.onmouseout = mouseOut(ь);
-э.onmouseout = mouseOut(э);
-ю.onmouseout = mouseOut(ю);
-я.onmouseout = mouseOut(я);
