@@ -12,13 +12,12 @@ let ratio = {
 	'kot':'кот',
 	'kurica': 'курица',
 	'limon':'лимон',
-	'multiki':'мультики',
+	'derevo':'дерево ',
 	'planshet':'планшет',
 	'sobaka':'собака',
-	'ukraine':'Украина',
+	'solnce':'солнце',
 	'cwietok':'цветок',
 	'chashka':'чашка',
-
 }
 
 let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
@@ -278,10 +277,10 @@ let giraffe = document.getElementsByTagName('img')[2];
 let kot = document.getElementsByTagName('img')[3];
 let kurica = document.getElementsByTagName('img')[4];
 let limon = document.getElementsByTagName('img')[5];
-let multiki = document.getElementsByTagName('img')[6];
+let derevo = document.getElementsByTagName('img')[6];
 let planshet = document.getElementsByTagName('img')[7];
 let sobaka = document.getElementsByTagName('img')[8];
-let ukraine = document.getElementsByTagName('img')[9];
+let solnce = document.getElementsByTagName('img')[9];
 let cwietok = document.getElementsByTagName('img')[10];
 let chashka = document.getElementsByTagName('img')[11];
 
@@ -305,10 +304,10 @@ giraffe.onmouseover = mouseOver(giraffe);
 kot.onmouseover = mouseOver(kot);
 kurica.onmouseover = mouseOver(kurica);
 limon.onmouseover = mouseOver(limon);
-multiki.onmouseover = mouseOver(multiki);
+derevo.onmouseover = mouseOver(derevo);
 planshet.onmouseover = mouseOver(planshet);
 sobaka.onmouseover = mouseOver(sobaka);
-ukraine.onmouseover = mouseOver(ukraine);
+solnce.onmouseover = mouseOver(solnce);
 cwietok.onmouseover = mouseOver(cwietok);
 chashka.onmouseover = mouseOver(chashka);
 
@@ -330,8 +329,8 @@ kurica.onclick = function() {
 limon.onclick = function() {
 	mouseClick(limon);
 }
-multiki.onclick = function() {
-	mouseClick(multiki);
+derevo.onclick = function() {
+	mouseClick(derevo);
 }
 planshet.onclick = function() {
 	mouseClick(planshet);
@@ -339,8 +338,8 @@ planshet.onclick = function() {
 sobaka.onclick = function() {
 	mouseClick(sobaka);
 }
-ukraine.onclick = function() {
-	mouseClick(ukraine);
+solnce.onclick = function() {
+	mouseClick(solnce);
 }
 cwietok.onclick = function() {
 	mouseClick(cwietok);
