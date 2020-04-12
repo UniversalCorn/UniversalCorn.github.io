@@ -37,6 +37,10 @@ body::-webkit-scrollbar {
   width: 1.5vw;
 }
 
+img:hover {
+  cursor: pointer;
+}
+
 .first::-webkit-scrollbar-track {
   background: rgba(27, 62, 100, 0.3); 
 }
