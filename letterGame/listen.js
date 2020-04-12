@@ -76,39 +76,6 @@ function goBack () {
 	}
 }
 
-const а = document.getElementsByTagName('img')[0];
-const б = document.getElementsByTagName('img')[1];
-const в = document.getElementsByTagName('img')[2];
-const г = document.getElementsByTagName('img')[3];
-const д = document.getElementsByTagName('img')[4];
-const е = document.getElementsByTagName('img')[5];
-const ё = document.getElementsByTagName('img')[6];
-const ж = document.getElementsByTagName('img')[7];
-const з = document.getElementsByTagName('img')[8];
-const и = document.getElementsByTagName('img')[9];
-const й = document.getElementsByTagName('img')[10];
-const к = document.getElementsByTagName('img')[11];
-const л = document.getElementsByTagName('img')[12];
-const м = document.getElementsByTagName('img')[13];
-const н = document.getElementsByTagName('img')[14];
-const о = document.getElementsByTagName('img')[15];
-const п = document.getElementsByTagName('img')[16];
-const р = document.getElementsByTagName('img')[17];
-const с = document.getElementsByTagName('img')[18];
-const т = document.getElementsByTagName('img')[19];
-const у = document.getElementsByTagName('img')[20];
-const ф = document.getElementsByTagName('img')[21];
-const х = document.getElementsByTagName('img')[22];
-const ц = document.getElementsByTagName('img')[23];
-const ч = document.getElementsByTagName('img')[24];
-const ш = document.getElementsByTagName('img')[25];
-const щ = document.getElementsByTagName('img')[26];
-const ъ = document.getElementsByTagName('img')[27];
-const ы = document.getElementsByTagName('img')[28];
-const ь = document.getElementsByTagName('img')[29];
-const э = document.getElementsByTagName('img')[31];
-const ю = document.getElementsByTagName('img')[32];
-const я = document.getElementsByTagName('img')[33];
 
 const backButton = document.getElementsByTagName('img')[30];
 backButton.onmousedown = goBack();
@@ -117,36 +84,10 @@ const playB = document.getElementsByTagName('img')[34];
 playB.onmousedown = playButton();
 
 
-а.onmousedown = playAudio(sounds[0]);
-б.onmousedown = playAudio(sounds[1]);
-в.onmousedown = playAudio(sounds[2]);
-г.onmousedown = playAudio(sounds[3]);
-д.onmousedown = playAudio(sounds[4]);
-е.onmousedown = playAudio(sounds[5]);
-ё.onmousedown = playAudio(sounds[6]);
-ж.onmousedown = playAudio(sounds[7]);
-з.onmousedown = playAudio(sounds[8]);
-и.onmousedown = playAudio(sounds[9]);
-й.onmousedown = playAudio(sounds[10]);
-к.onmousedown = playAudio(sounds[11]);
-л.onmousedown = playAudio(sounds[12]);
-м.onmousedown = playAudio(sounds[13]);
-н.onmousedown = playAudio(sounds[14]);
-о.onmousedown = playAudio(sounds[15]);
-п.onmousedown = playAudio(sounds[16]);
-р.onmousedown = playAudio(sounds[17]);
-с.onmousedown = playAudio(sounds[18]);
-т.onmousedown = playAudio(sounds[19]);
-у.onmousedown = playAudio(sounds[20]);
-ф.onmousedown = playAudio(sounds[21]);
-х.onmousedown = playAudio(sounds[22]);
-ц.onmousedown = playAudio(sounds[23]);
-ч.onmousedown = playAudio(sounds[24]);
-ш.onmousedown = playAudio(sounds[25]);
-щ.onmousedown = playAudio(sounds[26]);
-ъ.onmousedown = playAudio(sounds[27]);
-ы.onmousedown = playAudio(sounds[28]);
-ь.onmousedown = playAudio(sounds[29]);
-э.onmousedown = playAudio(sounds[30]);
-ю.onmousedown = playAudio(sounds[31]);
-я.onmousedown = playAudio(sounds[32]);
+for (let i = 0; i < 30; i++) {
+	document.querySelectorAll('img')[i].onmousedown = playAudio(sounds[i]);
+}
+
+for (let i = 31; i < 34; i++) {
+document.querySelectorAll('img')[i].onmousedown = playAudio(sounds[i-1]);
+}
