@@ -7,10 +7,12 @@ html,body {
 
 body {
 	position: relative;
-	font-size: 2rem;
 }
 
 #container {
+	background-attachment: fixed;
+	background-size: cover;
+	position: fixed;
 	margin: 0; 
 	padding: 0; 
 	width: 100%;
@@ -19,14 +21,13 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
-	flex-direction: column;
 }
 
 img {
 	width: 15vw;
 	height: 15vw;
-	margin: 0.5%;
-	flex: 0 1 18%;
+	margin: 0.5vw;
+	flex: 0 1 9vw;
 }
 
 ::-webkit-scrollbar {
