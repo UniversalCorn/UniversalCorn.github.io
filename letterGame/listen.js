@@ -2,7 +2,7 @@ const sounds = ['a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3',
  'm.mp3', 'n.mp3', 'o.mp3', 'p.mp3', 'r.mp3', 's.mp3', 't.mp3', 'u.mp3', 'f.mp3', 'h.mp3', 'c.mp3', 'ch.mp3', 'sh.mp3', 'shch.mp3', 'tver.mp3', 
  'yy.mp3', 'myag.mp3', 'e.mp3', 'yu.mp3', 'ya.mp3'];
  
- let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
+let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
 let rand = Math.floor(Math.random() * back.length);
@@ -10,19 +10,15 @@ let randBack = back[rand];
 let randVertBack = backVert[rand];
 
 if (rand === 0) {
-	//document.body.style.background = 'rgb(27, 62, 100)';
 	document.body.setAttribute('class', 'first');
 }
 else if (rand === 1) {
-	//document.body.style.background = 'rgb(246, 182, 208)';
 	document.body.setAttribute('class', 'second');
 }
 else if (rand === 2) {
-	//document.body.style.background = 'rgb(101, 204, 237)';
 	document.body.setAttribute('class', 'third');
 }
 else {
-	//document.body.style.background = 'rgb(122, 145, 159)';
 	document.body.setAttribute('class', 'fourth');
 }
 
@@ -74,18 +70,6 @@ function playAudio (strAudio) {
 	}
 }
 
-function mouseOver (target) {
-	return function() {
-		target.style.cursor = 'pointer';
-	}
-}
-
-function mouseOut (target) {
-	return function() {
-		target.style.cursor = 'default';
-	}
-}
-
 function goBack () {
 	return function() {
 		window.location.href = 'main.html';
@@ -127,84 +111,10 @@ const ю = document.getElementsByTagName('img')[32];
 const я = document.getElementsByTagName('img')[33];
 
 const backButton = document.getElementsByTagName('img')[30];
-backButton.onmouseover = mouseOver(backButton);
-backButton.onmouseout = mouseOut(backButton);
 backButton.onmousedown = goBack();
 
 const playB = document.getElementsByTagName('img')[34];
-playB.onmouseover = mouseOver(playB);
-playB.onmouseout = mouseOut(playB);
 playB.onmousedown = playButton();
-
-
-а.onmouseover = mouseOver(а);
-б.onmouseover = mouseOver(б);
-в.onmouseover = mouseOver(в);
-г.onmouseover = mouseOver(г);
-д.onmouseover = mouseOver(д);
-е.onmouseover = mouseOver(е);
-ё.onmouseover = mouseOver(ё);
-ж.onmouseover = mouseOver(ж);
-з.onmouseover = mouseOver(з);
-и.onmouseover = mouseOver(и);
-й.onmouseover = mouseOver(й);
-к.onmouseover = mouseOver(к);
-л.onmouseover = mouseOver(л);
-м.onmouseover = mouseOver(м);
-н.onmouseover = mouseOver(н);
-о.onmouseover = mouseOver(о);
-п.onmouseover = mouseOver(п);
-р.onmouseover = mouseOver(р);
-с.onmouseover = mouseOver(с);
-т.onmouseover = mouseOver(т);
-у.onmouseover = mouseOver(у);
-ф.onmouseover = mouseOver(ф);
-х.onmouseover = mouseOver(х);
-ц.onmouseover = mouseOver(ц);
-ч.onmouseover = mouseOver(ч);
-ш.onmouseover = mouseOver(ш);
-щ.onmouseover = mouseOver(щ);
-ъ.onmouseover = mouseOver(ъ);
-ы.onmouseover = mouseOver(ы);
-ь.onmouseover = mouseOver(ь);
-э.onmouseover = mouseOver(э);
-ю.onmouseover = mouseOver(ю);
-я.onmouseover = mouseOver(я);
-
-
-а.onmouseout = mouseOut(а);
-б.onmouseout = mouseOut(б);
-в.onmouseout = mouseOut(в);
-г.onmouseout = mouseOut(г);
-д.onmouseout = mouseOut(д);
-е.onmouseout = mouseOut(е);
-ё.onmouseout = mouseOut(ё);
-ж.onmouseout = mouseOut(ж);
-з.onmouseout = mouseOut(з);
-и.onmouseout = mouseOut(и);
-й.onmouseout = mouseOut(й);
-к.onmouseout = mouseOut(к);
-л.onmouseout = mouseOut(л);
-м.onmouseout = mouseOut(м);
-н.onmouseout = mouseOut(н);
-о.onmouseout = mouseOut(о);
-п.onmouseout = mouseOut(п);
-р.onmouseout = mouseOut(р);
-с.onmouseout = mouseOut(с);
-т.onmouseout = mouseOut(т);
-у.onmouseout = mouseOut(у);
-ф.onmouseout = mouseOut(ф);
-х.onmouseout = mouseOut(х);
-ц.onmouseout = mouseOut(ц);
-ч.onmouseout = mouseOut(ч);
-ш.onmouseout = mouseOut(ш);
-щ.onmouseout = mouseOut(щ);
-ъ.onmouseout = mouseOut(ъ);
-ы.onmouseout = mouseOut(ы);
-ь.onmouseout = mouseOut(ь);
-э.onmouseout = mouseOut(э);
-ю.onmouseout = mouseOut(ю);
-я.onmouseout = mouseOut(я);
 
 
 а.onmousedown = playAudio(sounds[0]);
