@@ -66,7 +66,7 @@ function mouseOut (target) {
 for (let i = 0; i < 12; i++) {
 	document.getElementsByTagName('img')[i].style.display = 'inline-block';
 	document.getElementsByTagName('img')[i].style.border = '0.5vw solid #e75480';
-	document.getElementsByTagName('img')[i].style.background = 'rgba(255, 255, 255, 0.3)';
+	document.getElementsByTagName('img')[i].style.background = 'rgba(0, 0, 0, 0.3)';
 }
 
 
