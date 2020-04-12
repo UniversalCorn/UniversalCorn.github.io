@@ -11,15 +11,19 @@ let randBack = back[rand];
 let randVertBack = backVert[rand];
 
 if (rand === 0) {
+	rgb(27, 62, 100);
 	document.body.setAttribute('class', 'first');
 }
 else if (rand === 1) {
+	rgb(246, 182, 208);
 	document.body.setAttribute('class', 'second');
 }
 else if (rand === 2) {
+	rgb(101, 204, 237);
 	document.body.setAttribute('class', 'third');
 }
 else {
+	rgb(122, 145, 159);
 	document.body.setAttribute('class', 'fourth');
 }
 
