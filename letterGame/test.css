@@ -24,6 +24,10 @@ body {
 	width: 25vw;
 }
 
+img:hover {
+	cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
