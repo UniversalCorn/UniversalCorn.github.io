@@ -67,6 +67,7 @@ function mouseOut (target) {
 for (let i = 0; i < 12; i++) {
 	document.getElementsByTagName('img')[i].style.display = 'inline-block';
 	document.getElementsByTagName('img')[i].style.border = '0.5vw solid #e75480';
+	document.getElementsByTagName('img')[i].style.background = 'rgba(255, 255, 255, 0.3)';
 }
 
 
@@ -140,7 +141,7 @@ function mouseClick(image) {
 	}
 	let big = document.createElement('div');
 	container.appendChild(big);
-	big.style.background = 'rgba(0, 0, 0, 0.5)';
+	big.style.background = 'rgba(255, 255, 255, 0.5)';
 	big.style.width = '45vw';
 	big.style.height = '45vw';
 	setInterval(function() { 
@@ -203,13 +204,14 @@ function mouseClick(image) {
 
 	closeImage.style.position = 'absolute';
 	closeImage.style.right = '2%';
-	closeImage.style.top = '2%'
+	closeImage.style.top = '2%';
 	closeImage.onmouseover = mouseOver(closeImage);
 	closeImage.onmouseout = mouseOut(closeImage);
 	closeImage.addEventListener('click', function(){
 		big.style.display = 'none';
 		big.parentNode.removeChild(big);
-		text.parentNode.removeChild(text);	
+		text.parentNode.removeChild(text);
+		container.style.justifyContent = 'space-around';	
 		for (let i = 0; i < 12; i++) {
 			document.getElementsByTagName('img')[i].style.display = 'inline-block';
 		}
