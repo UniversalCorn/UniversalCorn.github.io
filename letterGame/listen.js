@@ -5,25 +5,24 @@ const sounds = ['a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3',
  let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
-let scrollColor = '';
 let rand = Math.floor(Math.random() * back.length);
 let randBack = back[rand];
 let randVertBack = backVert[rand];
 
 if (rand === 0) {
-	rgb(27, 62, 100);
+	document.body.style.background = 'rgb(27, 62, 100)';
 	document.body.setAttribute('class', 'first');
 }
 else if (rand === 1) {
-	rgb(246, 182, 208);
+	document.body.style.background = 'rgb(246, 182, 208)';
 	document.body.setAttribute('class', 'second');
 }
 else if (rand === 2) {
-	rgb(101, 204, 237);
+	document.body.style.background = 'rgb(101, 204, 237)';
 	document.body.setAttribute('class', 'third');
 }
 else {
-	rgb(122, 145, 159);
+	document.body.style.background = 'rgb(122, 145, 159)';
 	document.body.setAttribute('class', 'fourth');
 }
 
