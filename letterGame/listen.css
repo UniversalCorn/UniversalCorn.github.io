@@ -6,6 +6,7 @@ html,body {
 }
 
 body {
+	position: static;
 	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
