@@ -8,7 +8,7 @@ html,body {
 body {
 	position: relative;
 	color: black;
-	text-shadow: -1px -1px  #fff, 1px -1px  #fff, -1px 1px  #fff, 1px 1px  #fff;
+	text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
 }
 
 #container {
@@ -30,6 +30,14 @@ img {
 	height: 15vw;
 	margin: 0.5vw;
 	flex: 0 1 9vw;
+}
+
+#inner:hover {
+	cursor: default;
+}
+
+img:hover {
+	cursor: pointer;
 }
 
 ::-webkit-scrollbar {
