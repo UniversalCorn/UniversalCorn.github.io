@@ -44,7 +44,6 @@ close.style.right = '1vw';
 close.style.top = '1vw';
 close.style.width = '3vw';
 close.style.height = '3vw';
-close.onmouseover = mouseOver(close);
 close.addEventListener('click', function() {
 	window.location.href = 'main.html';
 });
@@ -56,19 +55,12 @@ close.addEventListener('click', function() {
 	}
 }
 
-function mouseOut (target) {
-	return function() {
-		target.style.cursor = 'default';
-	}
-}
-
 
 for (let i = 0; i < 12; i++) {
 	document.getElementsByTagName('img')[i].style.display = 'inline-block';
 	document.getElementsByTagName('img')[i].style.border = '0.5vw solid #e75480';
 	document.getElementsByTagName('img')[i].style.background = 'rgba(0, 0, 0, 0.3)';
 }
-
 
 
 setInterval( function() {
@@ -172,13 +164,12 @@ function mouseClick(image) {
 	big.style.border = '1vw solid #e75480';
 	big.style.position = 'relative';
 
-
+	innerImage.setAttribute('id', 'inner');
 	innerImage.src = image.src;
 	innerImage.style.margin = '0';
 	innerImage.style.width = '100%'
 	innerImage.style.height = '100%';
 	innerImage.position = 'absolute';
-
 
 	closeImage.src = 'close.png';
 	setInterval(function() {
@@ -205,7 +196,6 @@ function mouseClick(image) {
 	closeImage.style.right = '2%';
 	closeImage.style.top = '2%';
 	closeImage.onmouseover = mouseOver(closeImage);
-	closeImage.onmouseout = mouseOut(closeImage);
 	closeImage.addEventListener('click', function(){
 		big.style.display = 'none';
 		big.parentNode.removeChild(big);
@@ -239,7 +229,6 @@ function mouseClick(image) {
 		}
 	},0);
 	listenImage.onmouseover = mouseOver(listenImage);
-	listenImage.onmouseout = mouseOut(listenImage);
 	let wordAudio = new Audio();
 	wordAudio.preload = 'auto';
 	let fileName = image.src.replace(/^.*[\\\/]/, '');
@@ -270,19 +259,7 @@ function mouseClick(image) {
 	}
 }
 
-
 let apelsin = document.getElementsByTagName('img')[0];
-let dom = document.getElementsByTagName('img')[1];
-let giraffe = document.getElementsByTagName('img')[2];
-let kot = document.getElementsByTagName('img')[3];
-let kurica = document.getElementsByTagName('img')[4];
-let limon = document.getElementsByTagName('img')[5];
-let derevo = document.getElementsByTagName('img')[6];
-let planshet = document.getElementsByTagName('img')[7];
-let sobaka = document.getElementsByTagName('img')[8];
-let solnce = document.getElementsByTagName('img')[9];
-let cwietok = document.getElementsByTagName('img')[10];
-let chashka = document.getElementsByTagName('img')[11];
 
 let startInterval = setInterval(function() {
 	if (apelsin.style.display === 'inline-block') {
@@ -298,52 +275,9 @@ else {
 }
 },0);
 
-apelsin.onmouseover = mouseOver(apelsin);
-dom.onmouseover = mouseOver(dom);
-giraffe.onmouseover = mouseOver(giraffe);
-kot.onmouseover = mouseOver(kot);
-kurica.onmouseover = mouseOver(kurica);
-limon.onmouseover = mouseOver(limon);
-derevo.onmouseover = mouseOver(derevo);
-planshet.onmouseover = mouseOver(planshet);
-sobaka.onmouseover = mouseOver(sobaka);
-solnce.onmouseover = mouseOver(solnce);
-cwietok.onmouseover = mouseOver(cwietok);
-chashka.onmouseover = mouseOver(chashka);
 
-apelsin.onclick = function() {
-	mouseClick(apelsin);
-}
-dom.onclick = function() {
-	mouseClick(dom);
-}
-giraffe.onclick = function() {
-	mouseClick(giraffe);
-}
-kot.onclick = function() {
-	mouseClick(kot);
-}
-kurica.onclick = function() {
-	mouseClick(kurica);
-}
-limon.onclick = function() {
-	mouseClick(limon);
-}
-derevo.onclick = function() {
-	mouseClick(derevo);
-}
-planshet.onclick = function() {
-	mouseClick(planshet);
-}
-sobaka.onclick = function() {
-	mouseClick(sobaka);
-}
-solnce.onclick = function() {
-	mouseClick(solnce);
-}
-cwietok.onclick = function() {
-	mouseClick(cwietok);
-}
-chashka.onclick = function() {
-	mouseClick(chashka);
+for (let i = 0; i < 12; i++) {
+	document.querySelectorAll('img')[i].onclick = function() {
+		mouseClick(document.querySelectorAll('img')[i]);
+	}
 }
