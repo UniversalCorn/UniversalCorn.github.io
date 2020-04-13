@@ -98,26 +98,16 @@ setInterval( function() {
 		}
 	}
 
-
 	if (window.innerWidth < window.innerHeight/2) {
-		close.style.width = '12vw';
-		close.style.height = '12vw';
-		close.style.right = '1vw';
-		close.style.top = '1vw';
-	}
-	else if (window.innerWidth < window.innerHeight) {
-		close.style.width = '9vw';
-		close.style.height = '9vw';
-		close.style.right = '1vw';
-		close.style.top = '1vw';
-	}
+			close.style.width = '16%';
+			close.style.height = window.innerWidth/6.25 + 'px';
+		}
 	else {
-		close.style.width = '6vw';
-		close.style.height = '6vw';
-		close.style.right = '0vw';
-		close.style.top = '0vw';
+		close.style.height = '8%';
+		close.style.width = window.innerHeight/12.5 + 'px';
 	}
-})
+
+}, 0)
 
 function mouseClick(image) {
 	for (let i = 0; i < 12; i++) {
@@ -126,16 +116,6 @@ function mouseClick(image) {
 	let big = document.createElement('div');
 	container.appendChild(big);
 	big.style.background = 'rgba(255, 255, 255, 0.5)';
-	setInterval(function() { 
-		if (window.innerWidth < window.innerHeight) {
-			big.style.width = '70%';
-			big.style.height = window.innerWidth/10*7 + 'px';
-		}
-		else {
-			big.style.height = '70%';
-			big.style.width = window.innerHeight/10*7 + 'px';
-		}
-	}, 0);
 	let innerImage = document.createElement('img');
 	let closeImage = document.createElement('img');
 	let listenImage = document.createElement('img');
@@ -150,7 +130,6 @@ function mouseClick(image) {
 	big.style.border = '1vw solid #e75480';
 	big.style.position = 'relative';
 
-	innerImage.setAttribute('id', 'inner');
 	innerImage.src = image.src;
 	innerImage.style.margin = '0';
 	innerImage.style.width = '100%'
@@ -159,30 +138,35 @@ function mouseClick(image) {
 
 	closeImage.src = 'close.png';
 	setInterval(function() {
-		if (window.innerWidth < window.innerHeight/1.5){
-			closeImage.style.width = '9vw';
-			closeImage.style.height = '9vw';
-		}
-		else if (window.innerWidth < window.innerHeight/1.2) {
-			closeImage.style.width = '6vw';
-			closeImage.style.height = '6vw';
-		}		
-		else if (window.innerWidth < window.innerHeight){
-			closeImage.style.width = '7vw';
-			closeImage.style.height = '7vw';
+		if (window.innerWidth < window.innerHeight) {
+			big.style.width = '70%';
+			big.style.height = window.innerWidth/10*7 + 'px';
 		}
 		else {
-			closeImage.style.width = '4vw';
-			closeImage.style.height = '4vw';
+			big.style.height = '70%';
+			big.style.width = window.innerHeight/10*7 + 'px';
+		}
+		if (window.innerWidth < window.innerHeight) {
+			closeImage.style.width = '12.5%';
+			closeImage.style.height = big.offsetWidth/8 + 'px';
+		}
+		else {
+			closeImage.style.height = '12.5%';
+			closeImage.style.width = big.offsetHeight/8 + 'px';
+		}
+		if (window.innerWidth < window.innerHeight) {
+			listenImage.style.width = '12.5%';
+			listenImage.style.height = big.offsetWidth/8 + 'px';
+		}
+		else {
+			listenImage.style.height = '12.5%';
+			listenImage.style.width = big.offsetHeight/8 + 'px';
 		}
 	},0);
-//	setInterval(function() {
-//	closeImage.style.width = (big.style.width) * (window.innerWidth/100) + 'vw';
-//	closeImage.style.height = (big.style.height) * (window.innerHeight/100) + 'vw';
-//	},0);
 	
 
 	closeImage.style.position = 'absolute';
+	closeImage.style.margin = '0';
 	closeImage.style.right = '2%';
 	closeImage.style.top = '2%';
 	closeImage.onmouseover = mouseOver(closeImage);
@@ -200,24 +184,6 @@ function mouseClick(image) {
 	listenImage.style.position = 'absolute';
 	listenImage.style.left = '2%';
 	listenImage.style.bottom = '2%';
-	setInterval(function() {
-		if (window.innerWidth < window.innerHeight/1.5){
-			listenImage.style.width = '9vw';
-			listenImage.style.height = '9vw';
-		}
-		else if (window.innerWidth < window.innerHeight/1.2) {
-			listenImage.style.width = '6vw';
-			listenImage.style.height = '6vw';
-		}		
-		else if (window.innerWidth < window.innerHeight){
-			listenImage.style.width = '7vw';
-			listenImage.style.height = '7vw';
-		}
-		else {
-			listenImage.style.width = '4vw';
-			listenImage.style.height = '4vw';
-		}
-	},0);
 	listenImage.onmouseover = mouseOver(listenImage);
 	let wordAudio = new Audio();
 	wordAudio.preload = 'auto';
