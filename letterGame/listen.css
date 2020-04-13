@@ -12,6 +12,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
+	text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
 }
 
 .letter {
