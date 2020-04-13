@@ -243,7 +243,7 @@ function mouseClick(image) {
 	let wordAudio = new Audio();
 	wordAudio.preload = 'auto';
 	let fileName = image.src.replace(/^.*[\\\/]/, '');
-	wordAudio.src = fileName.slice(0, -4) + '.mp3';
+	wordAudio.src = fileName.slice(0, -4) + 'M.mp3';
 	listenImage.addEventListener('click', function() {
 		wordAudio.play();
 	})
