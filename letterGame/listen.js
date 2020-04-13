@@ -47,7 +47,7 @@ setInterval( function() {
 
 let audioStart = new Audio();
 audioStart.preload = 'auto';
-audioStart.src = 'нажми.mp3';
+audioStart.src = 'нажмиM.mp3';
 
 function playButton() {
 	return function(){
@@ -84,9 +84,9 @@ const playB = document.getElementById('play');
 playB.onmousedown = playButton();
 
 for (let i = 0; i < 29; i++) {
-	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i]);
+	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i].replace(/^.*[\\\/]/, '').slice(0,-4) + 'M.mp3');
 }
 
 for (let i = 30; i < 34; i++) {
-	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i-1]);
+	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i-1].replace(/^.*[\\\/]/, '').slice(0,-4) + 'M.mp3');
 }
