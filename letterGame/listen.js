@@ -33,13 +33,13 @@ setInterval( function() {
 
 	if (window.innerWidth < window.innerHeight/1.5) {
 		for (let i = 0; i < 33; i++) {
-			document.getElementsByTagName('img')[i].style.transform = 'scale(1.2)';
+			document.getElementsByClassName('letter')[i].style.transform = 'scale(1.2)';
 		}
 	}
 
 	else {
 		for (let i = 0; i < 33; i++) {
-			document.getElementsByTagName('img')[i].style.transform = 'scale(1)';
+			document.getElementsByClassName('letter')[i].style.transform = 'scale(1)';
 		}
 	}
 
@@ -52,7 +52,7 @@ audioStart.src = 'нажми.mp3';
 function playButton() {
 	return function(){
 		for (let i = 0; i < 34; i++) {
-			document.getElementsByTagName('img')[i].style.display = 'inline-block';
+			document.getElementsByClassName('letter')[i].style.display = 'inline-block';
 			playB.style.display = 'none';
 			setTimeout(function() {
 				audioStart.play();
@@ -77,17 +77,16 @@ function goBack () {
 }
 
 
-const backButton = document.getElementsByTagName('img')[30];
+const backButton = document.getElementById('back');
 backButton.onmousedown = goBack();
 
-const playB = document.getElementsByTagName('img')[34];
+const playB = document.getElementById('play');
 playB.onmousedown = playButton();
 
-
-for (let i = 0; i < 30; i++) {
-	document.querySelectorAll('img')[i].onmousedown = playAudio(sounds[i]);
+for (let i = 0; i < 29; i++) {
+	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i]);
 }
 
-for (let i = 31; i < 34; i++) {
-document.querySelectorAll('img')[i].onmousedown = playAudio(sounds[i-1]);
+for (let i = 30; i < 34; i++) {
+	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i-1]);
 }
