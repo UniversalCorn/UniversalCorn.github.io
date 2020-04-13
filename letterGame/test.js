@@ -61,7 +61,7 @@ setInterval(function() {
 
 let audioStart = new Audio();
 audioStart.preload = 'auto';
-audioStart.src = 'выбери.mp3';
+audioStart.src = 'выбериM.mp3';
 
 function playButton() {
 	return function(){
@@ -138,11 +138,11 @@ function Question() {
 		}, 1000);
 	}
 	else {
-		letterSound.src = sounds[Math.floor(Math.random() * (sounds.length - 1))];
+		letterSound.src = sounds[Math.floor(Math.random() * (sounds.length - 1))].replace(/^.*[\\\/]/, '').slice(0,-4) + 'M.mp3';
 		let fileName = letterSound.src.replace(/^.*[\\\/]/, '');
 		letterSound.play();
 		for (let i = 0; i < sounds.length; i++) {
-			if (fileName === sounds[i]) {
+			if (fileName === sounds[i].slice(0,-4) + 'M.mp3') {
 				rememberSound = sounds[i];
 				sounds.splice(i,1);
 			}
