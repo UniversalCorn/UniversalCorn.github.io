@@ -162,6 +162,9 @@ function mouseClick(image) {
 			listenImage.style.height = '12.5%';
 			listenImage.style.width = big.offsetHeight/8 + 'px';
 		}
+
+		big.style.borderWidth = big.offsetWidth/30 + 'px';	
+		text.style.fontSize = big.offsetHeight/5 + 'px';
 	},0);
 	
 
@@ -185,29 +188,16 @@ function mouseClick(image) {
 	listenImage.style.left = '2%';
 	listenImage.style.bottom = '2%';
 	listenImage.onmouseover = mouseOver(listenImage);
+
+	text.style.margin = '0';
+
 	let wordAudio = new Audio();
 	wordAudio.preload = 'auto';
 	let fileName = image.src.replace(/^.*[\\\/]/, '');
 	wordAudio.src = fileName.slice(0, -4) + 'M.mp3';
 	listenImage.addEventListener('click', function() {
 		wordAudio.play();
-	})
-
-	setInterval(function() {
-	text.style.margin = '0';
-		if (window.innerfontSize < window.innerHeight*1.5){
-			text.style.fontSize = '4vw';
-		}
-		else if (window.innerfontSize < window.innerHeight*1.2) {
-			text.style.fontSize = '6vw';
-		}		
-		else if (window.innerfontSize < window.innerHeight){
-			text.style.fontSize = '8vw';
-		}
-		else {
-			text.style.fontSize = '10vw';
-		}
-	}, 0);
+	});
 	for (let key in ratio) {
 		if (key === fileName.slice(0, -4)) {
 			text.innerText = ratio[key];
