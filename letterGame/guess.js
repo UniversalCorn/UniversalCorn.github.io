@@ -126,23 +126,16 @@ function mouseClick(image) {
 	let big = document.createElement('div');
 	container.appendChild(big);
 	big.style.background = 'rgba(255, 255, 255, 0.5)';
-	big.style.width = '45vw';
-	big.style.height = '45vw';
 	setInterval(function() { 
-		if (window.innerWidth < window.innerHeight/1.5){
-			big.style.width = '60vw';
-			big.style.height = '60vw';
-			}
-		else if (window.innerWidth < window.innerHeight) {
-			big.style.width = '45vw';
-			big.style.height = '45vw';
+		if (window.innerWidth < window.innerHeight) {
+			big.style.width = '70%';
+			big.style.height = window.innerWidth/10*7 + 'px';
 		}
-
 		else {
-			big.style.width = '30vw';
-			big.style.height = '30vw';
+			big.style.height = '70%';
+			big.style.width = window.innerHeight/10*7 + 'px';
 		}
-	}, 0)
+	}, 0);
 	let innerImage = document.createElement('img');
 	let closeImage = document.createElement('img');
 	let listenImage = document.createElement('img');
@@ -183,6 +176,10 @@ function mouseClick(image) {
 			closeImage.style.height = '4vw';
 		}
 	},0);
+//	setInterval(function() {
+//	closeImage.style.width = (big.style.width) * (window.innerWidth/100) + 'vw';
+//	closeImage.style.height = (big.style.height) * (window.innerHeight/100) + 'vw';
+//	},0);
 	
 
 	closeImage.style.position = 'absolute';
@@ -252,7 +249,7 @@ function mouseClick(image) {
 	}
 }
 
-let apelsin = document.getElementsByTagName('img')[0];
+let apelsin = document.querySelectorAll('img')[0];
 
 let startInterval = setInterval(function() {
 	if (apelsin.style.display === 'inline-block') {
