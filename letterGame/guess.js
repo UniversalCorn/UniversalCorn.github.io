@@ -20,21 +20,36 @@ let rand = Math.floor(Math.random() * back.length);
 let randBack = back[rand];
 let randVertBack = backVert[rand];
 
+if (rand === 0) {
+	document.body.setAttribute('class', 'first');
+}
+else if (rand === 1) {
+	document.body.setAttribute('class', 'second');
+}
+else if (rand === 2) {
+	document.body.setAttribute('class', 'third');
+}
+else {
+	document.body.setAttribute('class', 'fourth');
+}
+
 let container = document.getElementById('container');
 
 setInterval(function() {
 	if (window.innerWidth < window.innerHeight) {
 		container.style.backgroundImage = `url(${randVertBack})`;
+		document.body.style.backgroundImage = `url(${randVertBack})`;
 	}
 	else {
 		container.style.backgroundImage = `url(${randBack})`;
+		document.body.style.backgroundImage = `url(${randBack})`;
 	}
 }, 0);
 
 let close = document.getElementById('close');
 close.style.position = 'fixed';
 close.style.right = '1vw';
-close.style.top = '1vw';
+close.style.top = '-2vw';
 close.style.width = '3vw';
 close.style.height = '3vw';
 close.addEventListener('click', function() {
@@ -42,7 +57,7 @@ close.addEventListener('click', function() {
 });
 
 
-  function mouseOver (target) {
+function mouseOver (target) {
 	return function() {
 		target.style.cursor = 'pointer';
 	}
@@ -57,62 +72,14 @@ for (let i = 0; i < 12; i++) {
 
 
 setInterval( function() {
-	if (window.innerWidth < window.innerHeight*0.62) {
-		for (let i = 0; i < 12; i++) {
-			document.getElementsByTagName('img')[i].style.width = document.getElementsByTagName('img')[i].style.height = '26vw';
-		}
-	}
-	else if (window.innerWidth < window.innerHeight*0.67) {
-		for (let i = 0; i < 12; i++) {
-			document.getElementsByTagName('img')[i].style.width = document.getElementsByTagName('img')[i].style.height = '24vw';
-		}
-	}
-	else if (window.innerWidth < window.innerHeight*0.69) {
-		for (let i = 0; i < 12; i++) {
-			document.getElementsByTagName('img')[i].style.width = document.getElementsByTagName('img')[i].style.height = '32vw';
-		}
-	}
-	else if (window.innerWidth < window.innerHeight*0.84) {
-		for (let i = 0; i < 12; i++) {
-			document.getElementsByTagName('img')[i].style.width = document.getElementsByTagName('img')[i].style.height = '25vw';
-		}
-	}
-	else if (window.innerWidth < window.innerHeight*1.04) {
-		for (let i = 0; i < 12; i++) {
-			document.getElementsByTagName('img')[i].style.width = document.getElementsByTagName('img')[i].style.height = '23vw';
-		}
-	}
-	else if (window.innerWidth < window.innerHeight*1.26) {
-		for (let i = 0; i < 12; i++) {
-			document.getElementsByTagName('img')[i].style.width = document.getElementsByTagName('img')[i].style.height = '20vw';
-		}
-	}
-	else if (window.innerWidth < window.innerHeight*1.56) {
-		for (let i = 0; i < 12; i++) {
-			document.getElementsByTagName('img')[i].style.width = document.getElementsByTagName('img')[i].style.height = '18vw';
-		}
-	}
-	else {
-		for (let i = 0; i < 12; i++) {
-			document.getElementsByTagName('img')[i].style.width = document.getElementsByTagName('img')[i].style.height = '14vw';
-		}
-	}
-
 	if (window.innerWidth < window.innerHeight/2) {
 			close.style.width = '16%';
 			close.style.height = window.innerWidth/6.25 + 'px';
-			for (let i = 0; i < 12; i++) {
-			//	document.getElementsByTagName('img')[i].style.transform = 'scope(1.5)';
-			}
 		}
 	else {
-		for (let i = 0; i < 12; i++) {
-				//document.getElementsByTagName('img')[i].style.transform = 'scope(1)';
-			}
 		close.style.height = '8%';
 		close.style.width = window.innerHeight/12.5 + 'px';
 	}
-
 }, 0)
 
 function mouseClick(image) {
@@ -137,6 +104,7 @@ function mouseClick(image) {
 	big.style.position = 'relative';
 
 	innerImage.src = image.src;
+	innerImage.setAttribute('id', 'inner');
 	innerImage.style.margin = '0';
 	innerImage.style.width = '100%'
 	innerImage.style.height = '100%';
@@ -150,7 +118,7 @@ function mouseClick(image) {
 			closeImage.style.width = '12.5%';
 			closeImage.style.height = big.offsetWidth/8 + 'px';
 			listenImage.style.width = '12.5%';
-			listenImage.style.height = big.offsetWidth/8 + 'px';
+			listenImage.style.height = big.offsetWidth/8 + 'px';		
 		}
 		else {
 			big.style.height = '70%';
@@ -171,6 +139,8 @@ function mouseClick(image) {
 	closeImage.style.top = '2%';
 	closeImage.onmouseover = mouseOver(closeImage);
 	closeImage.addEventListener('click', function(){
+		container.style.flexDirection = 'row';
+		container.style.justifyContent = 'center';
 		big.style.display = 'none';
 		big.parentNode.removeChild(big);
 		text.parentNode.removeChild(text);
@@ -203,21 +173,6 @@ function mouseClick(image) {
 }
 
 let apelsin = document.querySelectorAll('img')[0];
-
-let startInterval = setInterval(function() {
-	if (apelsin.style.display === 'inline-block') {
-	if (window.innerWidth < window.innerHeight) {
-		container.style.flexDirection = 'row';
-	}
-	else {
-		container.style.flexDirection = 'column';
-	}
-}
-else {
-	container.style.flexDirection = 'column';
-}
-},0);
-
 
 for (let i = 0; i < 12; i++) {
 	document.querySelectorAll('img')[i].onclick = function() {
