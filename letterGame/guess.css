@@ -6,7 +6,8 @@ html,body {
 	 }
 
 body {
-	position: relative;
+	background-attachment: fixed;
+	background-size: cover;
 	color: black;
 	text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
 }
@@ -14,7 +15,6 @@ body {
 #container {
 	background-attachment: fixed;
 	background-size: cover;
-	position: fixed;
 	margin: 0; 
 	padding: 0; 
 	width: 100%;
@@ -26,10 +26,10 @@ body {
 }
 
 img {
-	width: 15vw;
-	height: 15vw;
-	margin: 0.5vw;
-	flex: 0 1 9vw;
+	width: 30vw;
+	height: 30vw;
+	margin: 3vw 0vw;
+	/*flex: 0 1 9vw;*/
 }
 
 #inner:hover {
@@ -38,8 +38,4 @@ img {
 
 img:hover {
 	cursor: pointer;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
