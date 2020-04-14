@@ -153,7 +153,7 @@ function mouseClick(image) {
 	listenImage.src = 'listen.png';
 	listenImage.style.position = 'absolute';
 	listenImage.style.left = '2%';
-	listenImage.style.bottom = '2%';
+	listenImage.style.bottom = '-2.5vw';
 	listenImage.onmouseover = mouseOver(listenImage);
 
 	text.style.margin = '0';
