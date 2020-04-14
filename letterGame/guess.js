@@ -101,8 +101,14 @@ setInterval( function() {
 	if (window.innerWidth < window.innerHeight/2) {
 			close.style.width = '16%';
 			close.style.height = window.innerWidth/6.25 + 'px';
+			for (let i = 0; i < 12; i++) {
+			//	document.getElementsByTagName('img')[i].style.transform = 'scope(1.5)';
+			}
 		}
 	else {
+		for (let i = 0; i < 12; i++) {
+				//document.getElementsByTagName('img')[i].style.transform = 'scope(1)';
+			}
 		close.style.height = '8%';
 		close.style.width = window.innerHeight/12.5 + 'px';
 	}
@@ -141,28 +147,19 @@ function mouseClick(image) {
 		if (window.innerWidth < window.innerHeight) {
 			big.style.width = '70%';
 			big.style.height = window.innerWidth/10*7 + 'px';
-		}
-		else {
-			big.style.height = '70%';
-			big.style.width = window.innerHeight/10*7 + 'px';
-		}
-		if (window.innerWidth < window.innerHeight) {
 			closeImage.style.width = '12.5%';
 			closeImage.style.height = big.offsetWidth/8 + 'px';
-		}
-		else {
-			closeImage.style.height = '12.5%';
-			closeImage.style.width = big.offsetHeight/8 + 'px';
-		}
-		if (window.innerWidth < window.innerHeight) {
 			listenImage.style.width = '12.5%';
 			listenImage.style.height = big.offsetWidth/8 + 'px';
 		}
 		else {
+			big.style.height = '70%';
+			big.style.width = window.innerHeight/10*7 + 'px';
+			closeImage.style.height = '12.5%';
+			closeImage.style.width = big.offsetHeight/8 + 'px';
 			listenImage.style.height = '12.5%';
 			listenImage.style.width = big.offsetHeight/8 + 'px';
 		}
-
 		big.style.borderWidth = big.offsetWidth/30 + 'px';	
 		text.style.fontSize = big.offsetHeight/5 + 'px';
 	},0);
