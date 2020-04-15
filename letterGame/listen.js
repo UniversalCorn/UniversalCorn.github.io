@@ -83,10 +83,6 @@ backButton.onmousedown = goBack();
 const playB = document.getElementById('play');
 playB.onmousedown = playButton();
 
-for (let i = 0; i < 29; i++) {
+for (let i = 0; i < 33; i++) {
 	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i].replace(/^.*[\\\/]/, '').slice(0,-4) + 'M.mp3');
-}
-
-for (let i = 30; i < 34; i++) {
-	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i-1].replace(/^.*[\\\/]/, '').slice(0,-4) + 'M.mp3');
 }
