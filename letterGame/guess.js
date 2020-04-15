@@ -167,7 +167,7 @@ function mouseClick(image) {
 		}
 	});
 	$("#closeImage").click(function(){
-		$([document.documentElement, document.body]).animate({scrollTop: $(`#${image.src.replace(/^.*[\\\/]/, '').slice(0,-4)}`).offset().top}, 250);
+		$([document.documentElement, document.body]).animate({scrollTop: $(`#${image.src.replace(/^.*[\\\/]/, '').slice(0,-4)}`).offset().top}, 0);
  	});
 
 	listenImage.src = 'listen.png';
