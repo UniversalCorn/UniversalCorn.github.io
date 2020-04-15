@@ -26,8 +26,6 @@ body {
 }
 
 img {
-	width: 30vw;
-	height: 30vw;
 	margin: 3vw 0vw;
 	/*flex: 0 1 9vw;*/
 }
