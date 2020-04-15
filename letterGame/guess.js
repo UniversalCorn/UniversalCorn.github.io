@@ -11,7 +11,15 @@ let ratio = {
 	'solnce':'солнце',
 	'cwietok':'цветок',
 	'chashka':'чашка',
+	'shokolad': 'шоколад',
+	'oduvanchik': 'одуванчик',
+	'kukla': 'кукла',
+	'roza': 'роза',
+	'morozhenoe': 'мороженое',
+	'mesyac': 'месяц',
 }
+
+let imageAmount = Object.keys(ratio).length;
 
 let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
@@ -32,6 +40,7 @@ else if (rand === 2) {
 else {
 	document.body.setAttribute('class', 'fourth');
 }
+
 
 let container = document.getElementById('container');
 
@@ -64,7 +73,7 @@ function mouseOver (target) {
 }
 
 
-for (let i = 0; i < 12; i++) {
+for (let i = 0; i < imageAmount; i++) {
 	document.getElementsByTagName('img')[i].style.display = 'inline-block';
 	document.getElementsByTagName('img')[i].style.border = '0.5vw solid #e75480';
 	document.getElementsByTagName('img')[i].style.background = 'rgba(0, 0, 0, 0.3)';
@@ -83,7 +92,7 @@ setInterval( function() {
 }, 0)
 
 function mouseClick(image) {
-	for (let i = 0; i < 12; i++) {
+	for (let i = 0; i < imageAmount; i++) {
 		document.getElementsByTagName('img')[i].style.display = 'none';
 	}
 	let big = document.createElement('div');
@@ -145,7 +154,7 @@ function mouseClick(image) {
 		big.parentNode.removeChild(big);
 		text.parentNode.removeChild(text);
 		container.style.justifyContent = 'space-around';	
-		for (let i = 0; i < 12; i++) {
+		for (let i = 0; i < imageAmount; i++) {
 			document.getElementsByTagName('img')[i].style.display = 'inline-block';
 		}
 	});
