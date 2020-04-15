@@ -20,6 +20,7 @@ let ratio = {
 }
 
 let imageAmount = Object.keys(ratio).length;
+let imageTopPosition = 0;
 
 let back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 let backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
@@ -100,6 +101,7 @@ setInterval( function() {
 }, 0)
 
 function mouseClick(image) {
+	imageTopPosition = image.getBoundingClientRect().top;
 	for (let i = 0; i < imageAmount; i++) {
 		document.getElementsByTagName('img')[i].style.display = 'none';
 	}
@@ -167,7 +169,7 @@ function mouseClick(image) {
 		}
 	});
 	$("#closeImage").click(function(){
-		$([document.documentElement, document.body]).animate({scrollTop: $(`#${image.src.replace(/^.*[\\\/]/, '').slice(0,-4)}`).offset().top}, 0);
+		$([document.documentElement, document.body]).animate({scrollTop: $(`#${image.src.replace(/^.*[\\\/]/, '').slice(0,-4)}`).offset().top - imageTopPosition}, 0);
  	});
 
 	listenImage.src = 'listen.png';
