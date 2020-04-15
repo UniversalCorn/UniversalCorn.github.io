@@ -10,13 +10,17 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
+	text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
 }
 
 .letter {
-	display: none;
+ 	display: none;
+  	margin: -5vw 5vw;
+  	user-select: none;
+  	width: auto;
 }
 
 #play {
@@ -24,7 +28,7 @@ body {
 	width: 25vw;
 }
 
-img:hover {
+img,div:hover {
 	cursor: pointer;
 }
 
