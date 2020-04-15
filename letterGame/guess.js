@@ -141,7 +141,7 @@ function mouseClick(image) {
 		text.style.fontSize = big.offsetHeight/5 + 'px';
 	},0);
 	
-
+	closeImage.setAttribute('id', 'closeImage');
 	closeImage.style.position = 'absolute';
 	closeImage.style.margin = '0';
 	closeImage.style.right = '2%';
@@ -158,6 +158,9 @@ function mouseClick(image) {
 			document.getElementsByTagName('img')[i].style.display = 'inline-block';
 		}
 	});
+	$("#closeImage").click(function(){
+		$([document.documentElement, document.body]).animate({scrollTop: $(`#${image.src.replace(/^.*[\\\/]/, '').slice(0,-4)}`).offset().top}, 250);
+ 	});
 
 	listenImage.src = 'listen.png';
 	listenImage.style.position = 'absolute';
@@ -183,7 +186,7 @@ function mouseClick(image) {
 
 let apelsin = document.querySelectorAll('img')[0];
 
-for (let i = 0; i < 12; i++) {
+for (let i = 0; i < imageAmount; i++) {
 	document.querySelectorAll('img')[i].onclick = function() {
 		mouseClick(document.querySelectorAll('img')[i]);
 	}
