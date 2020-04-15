@@ -1,21 +1,15 @@
-const pics = [ 'а.png', 'б.png', 'в.png', 'г.png', 'д.png', 'е.png', 'ё.png', 'ж.png', 'з.png', 'и.png', 'й.png', 'к.png',
- 'л.png', 'м.png', 'н.png', 'о.png', 'п.png', 'р.png', 'с.png', 'т.png', 'у.png', 'ф.png', 'х.png', 'ц.png', 'ч.png',
- 'ш.png', 'щ.png', 'ъ.png', 'ы.png', 'ь.png', 'э.png', 'ю.png', 'я.png'];
-
 let sounds = [ 'a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3', 'j.mp3', 'z.mp3', 'i.mp3', 'y.mp3', 'k.mp3',
  'l.mp3', 'm.mp3', 'n.mp3', 'o.mp3', 'p.mp3', 'r.mp3', 's.mp3', 't.mp3', 'u.mp3', 'f.mp3', 'h.mp3', 'c.mp3', 'ch.mp3',
  'sh.mp3', 'shch.mp3', 'tver.mp3', 'yy.mp3', 'myag.mp3', 'e.mp3', 'yu.mp3', 'ya.mp3',];
 
+const relation = [ ['Аа', 'a.mp3'], ['Бб', 'b.mp3'], ['Вв', 'v.mp3'], ['Гг', 'g.mp3'],
+ ['Дд', 'd.mp3'], ['Ее', 'ye.mp3'], ['Ёё', 'yo.mp3'], ['Жж', 'j.mp3'], ['Зз', 'z.mp3'],
+ ['Ии', 'i.mp3'], ['Йй', 'y.mp3'], ['Кк', 'k.mp3'], ['Лл', 'l.mp3'], ['Мм', 'm.mp3'],
+ ['Нн', 'n.mp3'], ['Оо', 'o.mp3'], ['Пп', 'p.mp3'], ['Рр', 'r.mp3'], ['Сс', 's.mp3'],
+ ['Тт', 't.mp3'], ['Уу', 'u.mp3'], ['Фф', 'f.mp3'], ['Хх', 'h.mp3'], ['Цц', 'c.mp3'],
+ ['Чч', 'ch.mp3'], ['Шш', 'sh.mp3'], ['Щщ', 'shch.mp3'], ['Ъъ', 'tver.mp3'], ['Ыы', 'yy.mp3'],
+ ['Ьь', 'myag.mp3'], ['Ээ', 'e.mp3'], ['Юю', 'yu.mp3'], ['Яя', 'ya.mp3'] ];
 
-const relation = [ ['a.mp3', 'а.png'], ['b.mp3', 'б.png'], ['v.mp3', 'в.png'], ['g.mp3', 'г.png'],
- ['d.mp3', 'д.png'], ['ye.mp3', 'е.png'], ['yo.mp3', 'ё.png'], ['j.mp3', 'ж.png'], ['z.mp3', 'з.png'],
- ['i.mp3', 'и.png'], ['y.mp3', 'й.png'], ['k.mp3', 'к.png'], ['l.mp3', 'л.png'], ['m.mp3', 'м.png'],
- ['n.mp3', 'н.png'], ['o.mp3', 'о.png'], ['p.mp3', 'п.png'], ['r.mp3', 'р.png'], ['s.mp3', 'с.png'],
- ['t.mp3', 'т.png'], ['u.mp3', 'у.png'], ['f.mp3', 'ф.png'], ['h.mp3', 'х.png'], ['c.mp3', 'ц.png'],
- ['ch.mp3', 'ч.png'], ['sh.mp3', 'ш.png'], ['shch.mp3', 'щ.png'], ['tver.mp3', 'ъ.png'], ['yy.mp3', 'ы.png'],
- ['myag.mp3', 'ь.png'], ['e.mp3', 'э.png'], ['yu.mp3', 'ю.png'], ['ya.mp3', 'я.png'] ];
-
- let count = 0;
  let right = 0;
  let wrong = 0;
  let picsAmount = 33;
@@ -30,32 +24,29 @@ let randVertBack = backVert[rand];
 
 
 setInterval(function() {
-	for (let i = 0; i < 33; i++) {
-		document.getElementsByClassName('letter')[i].style.transform = 'scale(1.3)';
-	}
-	if (window.innerWidth < window.innerHeight) {
+	if (window.innerWidth < window.innerHeight/1.5) {
 		for (let i = 0; i < 33; i++) {
-			if (document.getElementsByClassName('letter')[i].offsetTop + document.getElementsByClassName('letter')[i].offsetHeight*1.2 > window.innerHeight) {
-				for (let j = 0; j < 33; j++) {
-					document.body.style.justifyContent = 'space-around';
-					document.getElementsByClassName('letter')[j].style.width = '15vw';
-				}
-			}
-			else {
-				for (let j = 0; j < 33; j++) {
-					document.getElementsByClassName('letter')[j].style.width = '20vw';
-					document.body.style.justifyContent = 'space-around';
-				}
-			}
+			document.getElementsByClassName('letter')[i].style.transform = 'scale(1.2)';
 		}
-		document.body.style.backgroundImage = `url(${randVertBack})`;
 	}
+
 	else {
 		for (let i = 0; i < 33; i++) {
-			document.getElementsByClassName('letter')[i].style.width = '12vw';
-			document.body.style.justifyContent = 'center';
+			document.getElementsByClassName('letter')[i].style.transform = 'scale(1)';
 		}
+	}
+
+	if (window.innerWidth < window.innerHeight) {	
+		document.body.style.backgroundImage = `url(${randVertBack})`;
+		for (let i = 0; i < 33; i++) {
+		document.getElementsByClassName('letter')[i].style.fontSize = '7vw';
+	}
+	}
+	else {
 		document.body.style.backgroundImage = `url(${randBack})`;
+		for (let i = 0; i < 33; i++) {
+			document.getElementsByClassName('letter')[i].style.fontSize = '5vw';
+		}
 	}
 }, 1)
 
@@ -72,7 +63,7 @@ function playButton() {
 		setTimeout(function() {
 			Question();
 			for (let i = 0; i < 33; i++) {
-				document.getElementsByTagName('img')[i].style.display = 'inline-block';
+				document.getElementsByClassName('letter')[i].style.display = 'inline-block';
 			}
 		}, 3500);
 	}
@@ -95,10 +86,19 @@ function Question() {
 		setTimeout( function() {
 			let panel = document.createElement('div');
 			document.body.appendChild(panel);
-			panel.style.width = '67vw';
-			panel.style.height = '67vw';
+			setInterval(function() {
+				if (window.innerWidth < window.innerHeight) {
+					panel.style.width = '70%';
+					panel.style.height = window.innerWidth/10*7 + 'px';
+					panel.style.fontSize = window.innerWidth/15 + 'px';
+				}
+				else {
+					panel.style.height = '70%';
+					panel.style.width = window.innerHeight/10*7 + 'px';
+					panel.style.fontSize = window.innerHeight/15 + 'px';
+				}
+			},0);
 			panel.style.textAlign = 'center';
-			panel.style.fontSize = '7vw';
 			document.body.style.justifyContent = 'center';
 			panel.innerText = `Ты набрал(а) ${points}`;
 			if (points % 100 === 11) {
@@ -128,10 +128,11 @@ function Question() {
 			panel.appendChild(getBack);
 			getBack.src = 'back.png'
 			getBack.style.position = 'relative';
-			getBack.style.width = '40%';
-			getBack.style.height = getBack.style.width + 'px';
-			getBack.style.top = '25%';
-
+			setInterval(function() {
+				getBack.style.width = '40%';
+				getBack.style.height = '40%';
+				getBack.style.top = '15%';
+			},0)
 			getBack.addEventListener('click', function() {
 				window.location.href = 'main.html';
 			})
@@ -144,31 +145,36 @@ function Question() {
 		for (let i = 0; i < sounds.length; i++) {
 			if (fileName === sounds[i].slice(0,-4) + 'M.mp3') {
 				rememberSound = sounds[i];
-				sounds.splice(i,1);
+				if (relation[i][1] === rememberSound) {
+					rememberSound = relation[i][0];
+				}
+					sounds.splice(i,1);
+					relation.splice(i,1);
 			}
 		}
-		let j = 0;
 		for (let i = 0; i < 33; i++) {
-			j++;
-			if (document.getElementsByTagName('img')[i].src.replace(/^.*[\\\/]/, '') === (rememberSound.substring(0, rememberSound.length - 3) + 'png')) {
-				document.getElementsByTagName('img')[i].addEventListener('click', function() {
-					document.getElementsByTagName('img')[i].style.background = 'rgba(50, 250, 50, 0.5)';
+			if (document.getElementsByClassName('letter')[i].innerText === rememberSound) {
+				document.getElementsByClassName('letter')[i].addEventListener('click', function() {
+					document.getElementsByClassName('letter')[i].style.background = 'rgba(50, 250, 50, 0.5)';
+					document.getElementsByClassName('letter')[i].style.outline = '2vw solid rgba(50, 250, 50, 0.5)';
 					right+=1;
 					wrong = wrong - (33 - picsAmount);
 					picsAmount--;
 					setTimeout( function() {
-						document.getElementsByTagName('img')[i].style.display = 'none';
+						document.getElementsByClassName('letter')[i].style.display = 'none';
 					}, 500);
 					setTimeout( function() {
 						Question();
 					}, 1000);
 				});
 			}
-			else { document.getElementsByTagName('img')[i].addEventListener('click', function() {
-					document.getElementsByTagName('img')[i].style.background = 'rgba(250, 50, 50, 0.5)';
+			else { document.getElementsByClassName('letter')[i].addEventListener('click', function() {
+					document.getElementsByClassName('letter')[i].style.background = 'rgba(250, 50, 50, 0.5)';
+					document.getElementsByClassName('letter')[i].style.outline = '2vw solid rgba(250, 50, 50, 0.5)';
 					wrong = wrong + 1;
 					setTimeout( function() {
-						document.getElementsByTagName('img')[i].style.background = 'transparent';
+						document.getElementsByClassName('letter')[i].style.background = 'transparent';
+						document.getElementsByClassName('letter')[i].style.outline = '0 solid transparent';
 					}, 500);
 				});
 			}
@@ -178,5 +184,5 @@ function Question() {
 }
 
 
-const playB = document.getElementsByTagName('img')[33];
+const playB = document.getElementsByTagName('img')[0];
 playB.onmousedown = playButton();
