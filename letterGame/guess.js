@@ -48,10 +48,18 @@ setInterval(function() {
 	if (window.innerWidth < window.innerHeight) {
 		container.style.backgroundImage = `url(${randVertBack})`;
 		document.body.style.backgroundImage = `url(${randVertBack})`;
+		for (let i = 0; i < imageAmount; i++) {
+			document.querySelectorAll('img')[i].style.width = '45vw';
+			document.querySelectorAll('img')[i].style.height = '45vw';
+		}
 	}
 	else {
 		container.style.backgroundImage = `url(${randBack})`;
 		document.body.style.backgroundImage = `url(${randBack})`;
+		for (let i = 0; i < imageAmount; i++) {
+			document.querySelectorAll('img')[i].style.width = '30vw';
+			document.querySelectorAll('img')[i].style.height = '30vw';
+		}
 	}
 }, 0);
 
