@@ -68,8 +68,6 @@ let close = document.getElementById('close');
 close.style.position = 'fixed';
 close.style.right = '1vw';
 close.style.top = '-2vw';
-close.style.width = '3vw';
-close.style.height = '3vw';
 close.addEventListener('click', function() {
 	window.location.href = 'main.html';
 });
@@ -90,15 +88,15 @@ for (let i = 0; i < imageAmount; i++) {
 
 
 setInterval( function() {
-	if (window.innerWidth < window.innerHeight/2) {
+	if (window.innerWidth < window.innerHeight) {
 			close.style.width = '16%';
 			close.style.height = window.innerWidth/6.25 + 'px';
 		}
 	else {
-		close.style.height = '8%';
-		close.style.width = window.innerHeight/12.5 + 'px';
+		close.style.height = '16%';
+		close.style.width = window.innerHeight/6.25 + 'px';
 	}
-}, 0)
+}, 0);
 
 function mouseClick(image) {
 	imageTopPosition = image.getBoundingClientRect().top;
