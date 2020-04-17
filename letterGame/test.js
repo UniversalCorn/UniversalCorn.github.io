@@ -114,11 +114,11 @@ function MoveRight() {
 }
 
 function DrawLeft(timePassed) {
-	menu.style.left = -(timePassed*4 - menu.offsetWidth) + 'px';
+	menu.style.left = -(timePassed - menu.offsetWidth) + 'px';
 }
 
 function DrawRight(timePassed) {
-	menu.style.left = timePassed*4 + 'px';
+	menu.style.left = timePassed + 'px';
 }
 
 let listen = document.getElementById('listen');
@@ -135,6 +135,10 @@ settings.style.right = '0.5vw';
 settings.style.bottom = '0.5vw';
 settings.addEventListener('click', function() {
 	settings.style.display = 'none';
+	menuArrow.style.pointerEvents = 'none';
+	setTimeout(function() {
+		menuArrow.style.pointerEvents = 'auto';
+	}, window.innerWidth);
 	MoveLeft();
 });
 
@@ -150,12 +154,14 @@ let menuRepeat = document.getElementById('menuRepeat');
 });
 let menuArrow = document.getElementById('menuArrow');
 menuArrow.addEventListener('click', function() {
-	settings.style.display = 'inline-block';
-	MoveRight();
+	setTimeout(function() {
+		settings.style.display = 'inline-block';
+	}, window.innerWidth);
+	MoveRight();	
 });
 
 menu.style.left = '100vw';
-menu.style.width = '105vw';
+menu.style.width = '100vw';
 menu.style.height = '20vw';
 for (let i = 0; i < 3; i++) {
 	document.getElementsByClassName('menuImage')[i].style.height = '80%';
