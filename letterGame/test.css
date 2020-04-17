@@ -28,8 +28,24 @@ body {
 	width: 25vw;
 }
 
+#listen,#settings {
+	display: none;
+}
+
+#menu {
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
 img,div:hover {
 	cursor: pointer;
+}
+
+#menu:hover {
+	cursor: default;
 }
 
 ::-webkit-scrollbar {
