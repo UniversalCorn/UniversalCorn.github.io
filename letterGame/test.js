@@ -158,9 +158,9 @@ menu.style.left = '100vw';
 menu.style.width = '105vw';
 menu.style.height = '20vw';
 for (let i = 0; i < 3; i++) {
-	document.getElementsByClassName('menuImage')[i].style.height = '60%';
+	document.getElementsByClassName('menuImage')[i].style.height = '80%';
 	document.getElementsByClassName('menuImage')[i].style.width = document.getElementsByClassName('menuImage')[i].style.height + 'px';
-	document.getElementsByClassName('menuImage')[i].style.margin =  '0 6vw';
+	document.getElementsByClassName('menuImage')[i].style.margin =  '0 8vw';
 }
 
 let staticWidth = '';
