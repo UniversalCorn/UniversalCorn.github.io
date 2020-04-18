@@ -4,7 +4,7 @@ let sounds = [ 'a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3', 
 
 const relation = [ ['Аа', 'a.mp3'], ['Бб', 'b.mp3'], ['Вв', 'v.mp3'], ['Гг', 'g.mp3'],
  ['Дд', 'd.mp3'], ['Ее', 'ye.mp3'], ['Ёё', 'yo.mp3'], ['Жж', 'j.mp3'], ['Зз', 'z.mp3'],
- ['Ии', 'i.mp3'], ['Йй', 'y.mp3'], ['Кк', 'k.mp3'], ['Лл', 'l.mp3'], ['Мм', 'm.mp3'],
+ ['Ии', 'i.mp3'], ['Йй', 'y.mp3'], ['Кк', 'k.mp3'], ['Лл', 'l.mp3'], ['Мм', genderStr],
  ['Нн', 'n.mp3'], ['Оо', 'o.mp3'], ['Пп', 'p.mp3'], ['Рр', 'r.mp3'], ['Сс', 's.mp3'],
  ['Тт', 't.mp3'], ['Уу', 'u.mp3'], ['Фф', 'f.mp3'], ['Хх', 'h.mp3'], ['Цц', 'c.mp3'],
  ['Чч', 'ch.mp3'], ['Шш', 'sh.mp3'], ['Щщ', 'shch.mp3'], ['Ъъ', 'tver.mp3'], ['Ыы', 'yy.mp3'],
@@ -37,6 +37,14 @@ else if (rand === 2) {
 }
 else {
 	menuColor = 'rgba(82, 96, 256, 0.8)';
+}
+
+let genderStr = 'F.mp3';
+if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Male') {
+	genderStr = 'M.mp3';
+}
+else if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Female') {
+	genderStr = 'F.mp3'; 
 }
 
 
@@ -277,7 +285,7 @@ else {
 
 let audioStart = new Audio();
 audioStart.preload = 'auto';
-audioStart.src = 'выбери' + 'M.mp3';
+audioStart.src = 'выбери' + genderStr;
 
 let letterSound = new Audio();
 audioStart.preload = 'auto';
@@ -290,7 +298,7 @@ function Question() {
 	if (picsAmount === 0) { 
 		let audioFinish = new Audio();
 		audioFinish.preload = 'auto';
-		audioFinish.src = 'molodec' + 'M.mp3';
+		audioFinish.src = 'molodec' + genderStr;
 		rememberMas = rememberMas.map((val, i) => (i!=0 && val == rememberMas[i-1]) ? 0 : 1 );
 		wrongSum = rememberMas.reduce((acc, val) => acc + val, 0)
 		rightSum = right;
@@ -352,13 +360,13 @@ function Question() {
 		}, 1000);
 	}
 	else {
-		letterSound.src = sounds[Math.floor(Math.random() * (sounds.length - 1))].replace(/^.*[\\\/]/, '').slice(0,-4) + 'M.mp3';
+		letterSound.src = sounds[Math.floor(Math.random() * (sounds.length - 1))].replace(/^.*[\\\/]/, '').slice(0,-4) + genderStr;
 		let fileName = letterSound.src.replace(/^.*[\\\/]/, '');
 		letterSound.play();
 		for (let i = 0; i < sounds.length; i++) {
-			if (fileName === sounds[i].slice(0,-4) + 'M.mp3') {
+			if (fileName === sounds[i].slice(0,-4) + genderStr) {
 				rememberSound = sounds[i];
-				currentSound.src = sounds[i].slice(0,-4) + 'M.mp3';
+				currentSound.src = sounds[i].slice(0,-4) + genderStr;
 				if (relation[i][1] === rememberSound) {
 					rememberSound = relation[i][0];
 				}
