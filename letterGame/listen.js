@@ -83,6 +83,14 @@ backButton.onmousedown = goBack();
 const playB = document.getElementById('play');
 playB.onmousedown = playButton();
 
+let genderStr = 'F.mp3';
+if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Male') {
+	genderStr = 'M.mp3'
+}
+else if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Female') {
+	genderStr = 'F.mp3'; 
+}
+
 for (let i = 0; i < 33; i++) {
 	document.querySelectorAll('.letter')[i].onmousedown = playAudio(sounds[i].replace(/^.*[\\\/]/, '').slice(0,-4) + 'M.mp3');
 }
