@@ -42,6 +42,14 @@ else {
 	document.body.setAttribute('class', 'fourth');
 }
 
+let genderStr = 'F.mp3';
+if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Male') {
+	genderStr = 'M.mp3';
+}
+else if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Female') {
+	genderStr = 'F.mp3'; 
+}
+
 
 let container = document.getElementById('container');
 
@@ -181,7 +189,7 @@ function mouseClick(image) {
 	let wordAudio = new Audio();
 	wordAudio.preload = 'auto';
 	let fileName = image.src.replace(/^.*[\\\/]/, '');
-	wordAudio.src = fileName.slice(0, -4) + 'M.mp3';
+	wordAudio.src = fileName.slice(0, -4) + genderStr;
 	listenImage.addEventListener('click', function() {
 		wordAudio.play();
 	});
