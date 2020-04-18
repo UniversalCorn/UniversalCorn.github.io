@@ -100,8 +100,8 @@ function MoveLeft() {
 	let timer = setInterval(function() {
 		let timePassed = Date.now() - start;
 		if ( Number(menu.style.left.slice(0,-2)) <= 0) {
+			menu.style.left = 0;
 			clearInterval(timer);
-
 			return;
 		}
 		DrawLeft(timePassed);
@@ -122,11 +122,11 @@ function MoveRight() {
 }
 
 function DrawLeft(timePassed) {
-	menu.style.left = -(timePassed - menu.offsetWidth) + 'px';
+	menu.style.left = -(timePassed*window.innerWidth/250 - menu.offsetWidth) + 'px';
 }
 
 function DrawRight(timePassed) {
-	menu.style.left = timePassed + 'px';
+	menu.style.left = timePassed*window.innerWidth/250 + 'px';
 }
 
 let listen = document.getElementById('listen');
@@ -146,7 +146,7 @@ settings.addEventListener('click', function() {
 	menuArrow.style.pointerEvents = 'none';
 	setTimeout(function() {
 		menuArrow.style.pointerEvents = 'auto';
-	}, window.innerWidth);
+	}, window.innerWidth/250);
 	MoveLeft();
 });
 
@@ -154,7 +154,7 @@ let menu = document.getElementById('menu');
 menu.style.background = menuColor;
 let pageClose = document.getElementById('pageClose');
 pageClose.addEventListener('click', function() {
-	window.location.href = 'main.html';
+	window.history.back();
 });
 let menuRepeat = document.getElementById('menuRepeat');
 	menuRepeat.addEventListener('click', function() {
@@ -164,7 +164,7 @@ let menuArrow = document.getElementById('menuArrow');
 menuArrow.addEventListener('click', function() {
 	setTimeout(function() {
 		settings.style.display = 'inline-block';
-	}, window.innerWidth);
+	}, window.innerWidth/250);
 	MoveRight();	
 });
 
