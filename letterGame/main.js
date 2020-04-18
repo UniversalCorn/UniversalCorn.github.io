@@ -23,6 +23,8 @@ else {
 	menuColor = 'rgba(82, 96, 256, 0.9)';
 }
 
+window.scrollTo(0,document.body.scrollHeight);
+
 let headliner = document.getElementById('headliner');
 headliner.style.background = 'rgba(256, 64, 64, 0.7)';
 headliner.style.left = -headliner.offsetWidth + 'px';
