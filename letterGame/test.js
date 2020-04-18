@@ -355,7 +355,7 @@ function Question() {
 				getBack.style.top = '15%';
 			},0)
 			getBack.addEventListener('click', function() {
-				window.location.href = 'main.html';
+				window.history.back();
 			})
 		}, 1000);
 	}
