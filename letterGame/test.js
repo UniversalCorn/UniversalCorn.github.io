@@ -154,7 +154,7 @@ let menu = document.getElementById('menu');
 menu.style.background = menuColor;
 let pageClose = document.getElementById('pageClose');
 pageClose.addEventListener('click', function() {
-	window.history.back();
+	window.location.href = document.referrer;
 });
 let menuRepeat = document.getElementById('menuRepeat');
 	menuRepeat.addEventListener('click', function() {
@@ -355,7 +355,7 @@ function Question() {
 				getBack.style.top = '15%';
 			},0)
 			getBack.addEventListener('click', function() {
-				window.history.back();
+				window.location.href = document.referrer;
 			})
 		}, 1000);
 	}
