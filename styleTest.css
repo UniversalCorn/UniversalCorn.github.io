@@ -1,0 +1,148 @@
+html,body,.container {
+	width: 100%; height: 100%;
+	position: fixed;
+}
+
+.container {
+	background-color: transparent;
+	color: transparent;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+.container p {
+	pointer-events: none;
+	line-height: 11.25vw;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 15vw;
+	font-weight: 700;
+	background-image: url('shyfr4.gif');
+	background-size: 10.7vw 20vh;
+	background-repeat: round;
+	-webkit-background-clip: text;
+}
+
+.particles-js-canvas-el {
+	background-color: black;
+}
+
+span {
+	white-space: nowrap;
+}
+
+.first {
+	letter-spacing: 3vw;
+}
+
+.second {
+	letter-spacing: 0.5vw;
+}
+
+.third {
+	letter-spacing: 2.8vw;
+}
+
+.fourth {
+	letter-spacing: -3.375vw;
+}
+
+.space {
+	white-space: pre;
+}
+
+@keyframes playB {
+	from {
+		left: -100%; top: -100%;
+		width: 200vw; height: 200vw;
+	}
+	to {
+		left: 52%; top: 50%;
+		width: 3vw; height: 3vw;
+	}
+}
+
+#play {
+	animation: playB 750ms ease 5500ms;
+	position: absolute;
+	left: 52%; top: 50%;
+	width: 3vw; height: 3vw;
+	visibility: hidden;
+}
+
+@keyframes vanish {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.drop {
+	position: absolute;
+	font-size: 12vw;
+	color: #20C20E;
+}
+
+.window {
+	filter: grayscale(80%);
+	border: 3px solid #20C20E;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: filter 1s;
+	overflow: hidden;
+}
+
+.window:hover {
+	filter: none;
+}
+
+#window1:hover > #img1 {
+	transform: scale(1.2);
+}
+
+#window2:hover > #img2 {
+	transform: scale(1.2);
+} 
+
+#img1,#img2 {
+	transition: transform 1s;
+}
+
+img:hover {
+	cursor: pointer;
+}
+
+.warning {
+	font-size: 20vw;
+	writing-mode: vertical-lr;
+	letter-spacing: -3vw;
+	text-orientation: upright;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #20C20E;
+	background-color: rgba(0, 30, 0, 0.9);
+	text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
