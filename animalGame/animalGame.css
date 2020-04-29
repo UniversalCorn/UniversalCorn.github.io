@@ -1,0 +1,32 @@
+body {
+	position: relative;
+	background-image: url('background1.jpg');
+	background-attachment: fixed;
+}
+
+li {
+	display: block;
+}
+
+figure {
+	max-height: 70vw;
+	display: inline-block;
+	background: yellow;
+	padding: 10px;
+	text-align: center;
+}
+
+figcaption {
+	width: calc(100% + 20px);
+	position: relative;
+	top: 5px;
+	left: -10px;
+}
+
+button {
+	border: 5px solid yellow;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
