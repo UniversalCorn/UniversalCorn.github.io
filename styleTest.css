@@ -127,7 +127,8 @@ img:hover {
 }
 
 .warning {
-	font-size: 20vw;
+	display: none;
+	font-size: 200%;
 	writing-mode: vertical-lr;
 	letter-spacing: -3vw;
 	text-orientation: upright;
