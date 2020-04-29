@@ -8,7 +8,7 @@ document.getElementsByClassName('warning')[0].style.display = 'none';
 let para = document.getElementsByTagName('p')[0];
 let playB = document.getElementsByTagName('img')[0];
 setInterval(function() {
-	if (window.innerWidth < window.innerHeight/2) {
+	if (window.innerWidth < window.innerHeight) {
 		document.getElementsByClassName('warning')[0].style.display = 'flex';
 	}
 	else {
