@@ -49,6 +49,7 @@ if (document.referrer.substr(document.referrer.length - 6) === 'r=Male') {
 else if (document.referrer.substr(document.referrer.length - 6) === 'Female') {
 	console.log('if2');
 	genderStr = 'F.mp3'; 
+	console.log('if2');
 	let url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Male';
 	window.history.pushState({ path: url }, '', url);
 }
