@@ -77,7 +77,7 @@ close.style.position = 'fixed';
 close.style.right = '1vw';
 close.style.top = '-2vw';
 close.addEventListener('click', function() {
-	window.location.href = document.referrer;
+	window.history.go(-1);
 });
 
 
