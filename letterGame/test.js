@@ -1,4 +1,3 @@
-console.log('if2');
 let sounds = [ 'a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3', 'j.mp3', 'z.mp3', 'i.mp3', 'y.mp3', 'k.mp3',
  'l.mp3', 'm.mp3', 'n.mp3', 'o.mp3', 'p.mp3', 'r.mp3', 's.mp3', 't.mp3', 'u.mp3', 'f.mp3', 'h.mp3', 'c.mp3', 'ch.mp3',
  'sh.mp3', 'shch.mp3', 'tver.mp3', 'yy.mp3', 'myag.mp3', 'e.mp3', 'yu.mp3', 'ya.mp3',];
@@ -42,19 +41,14 @@ else {
 
 let genderStr = 'F.mp3';
 if (document.referrer.substr(document.referrer.length - 6) === 'r=Male') {
-	console.log('if1');
 	genderStr = 'M.mp3';
 	let url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Male';
 	window.history.replaceState({ path: url }, '', url);
 }
 else if (document.referrer.substr(document.referrer.length - 6) === 'Female') {
-	console.log('if2');
 	genderStr = 'F.mp3'; 
 	let url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Female';
 	window.history.replaceState({ path: url }, '', url);
-}
-else {
-	console.log('if3');
 }
 
 
@@ -368,7 +362,7 @@ function Question() {
 				getBack.style.top = '15%';
 			},0)
 			getBack.addEventListener('click', function() {
-				window.location.href = document.referrer;
+				window.history.replaceState({ path: window.location.href }, '', window.location.href);
 			})
 		}, 1000);
 	}
