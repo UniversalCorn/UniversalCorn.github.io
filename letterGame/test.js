@@ -39,12 +39,17 @@ else {
 	menuColor = 'rgba(82, 96, 256, 0.8)';
 }
 
+let url = '';
 let genderStr = 'F.mp3';
-if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Male') {
+if (document.referrer.slice(0,-6) === 'r=Male') {
 	genderStr = 'M.mp3';
+	url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Male';
+	window.history.pushState({ path: url }, '', url);
 }
-else if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Female') {
+else if (document.referrer.slice(0,-6) === 'Female') {
 	genderStr = 'F.mp3'; 
+	url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Male';
+	window.history.pushState({ path: url }, '', url);
 }
 
 
@@ -154,11 +159,11 @@ let menu = document.getElementById('menu');
 menu.style.background = menuColor;
 let pageClose = document.getElementById('pageClose');
 pageClose.addEventListener('click', function() {
-	window.location.href = document.referrer;
+	window.history.go(-1);
 });
 let menuRepeat = document.getElementById('menuRepeat');
 	menuRepeat.addEventListener('click', function() {
-	window.location.reload(false);	
+		window.history.go(0);
 });
 let menuArrow = document.getElementById('menuArrow');
 menuArrow.addEventListener('click', function() {
