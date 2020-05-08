@@ -205,6 +205,5 @@ let apelsin = document.querySelectorAll('img')[0];
 for (let i = 0; i < imageAmount; i++) {
 	document.querySelectorAll('img')[i].onclick = function() {
 		mouseClick(document.querySelectorAll('img')[i]);
-		$(document).height() = '100%';
 	}
 }
