@@ -1,8 +1,6 @@
 html,body { 
 	margin: 0; 
 	padding: 0; 
-	height: 100%; 
-	width: 100%;
 }
 
 body {
@@ -12,7 +10,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
-	text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
+  text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
 }
 
 .letter {
@@ -24,8 +22,11 @@ body {
 }
 
 #play {
-	position: fixed;
+	position: absolute;
 	width: 25vw;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #back {
