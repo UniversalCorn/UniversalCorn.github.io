@@ -162,7 +162,7 @@ let menu = document.getElementById('menu');
 menu.style.background = menuColor;
 let pageClose = document.getElementById('pageClose');
 pageClose.addEventListener('click', function() {
-	window.history.go(-1);
+	window.location.reload(true);
 	//window.history.pushState({ path: 'https://universalcorn.github.io/letterGame/main.html' }, '', 'https://universalcorn.github.io/letterGame/main.html');
 	//window.location.href = 'https://universalcorn.github.io/letterGame/main.html';
 	//location.reload();
