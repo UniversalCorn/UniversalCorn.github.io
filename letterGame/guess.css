@@ -12,7 +12,6 @@ body {
 }
 
 #container {
-	width: 100vh; height: 100vh;
 	background-attachment: fixed;
 	background-size: cover;
 	margin: 0; 
