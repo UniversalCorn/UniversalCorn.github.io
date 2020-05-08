@@ -41,12 +41,12 @@ else {
 
 let url = '';
 let genderStr = 'F.mp3';
-if (document.referrer.slice(0,document.referrer.length-6) === 'r=Male') {
+if (document.referrer.slice(0,document.referrer.length - 6) === 'r=Male') {
 	genderStr = 'M.mp3';
 	url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Male';
 	window.history.pushState({ path: url }, '', url);
 }
-else if (document.referrer.slice(0,document.referrer.length-6) === 'Female') {
+else if (document.referrer.substr(document.referrer.length - 6) === 'Female') {
 	genderStr = 'F.mp3'; 
 	url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Male';
 	window.history.pushState({ path: url }, '', url);
