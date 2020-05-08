@@ -362,7 +362,10 @@ function Question() {
 				getBack.style.top = '15%';
 			},0)
 			getBack.addEventListener('click', function() {
+				console.log('lalka');
+				setTimeout(function() {
 				window.history.replaceState({ path: window.location.href }, '', window.location.href);
+				},500);
 			})
 		}, 1000);
 	}
