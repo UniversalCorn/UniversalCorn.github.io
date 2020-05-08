@@ -164,7 +164,7 @@ function mouseClick(image) {
 	closeImage.style.top = '2%';
 	closeImage.onmouseover = mouseOver(closeImage);
 	closeImage.addEventListener('click', function(){
-		document.body.style.height = 'auto';
+		$(document).height() = 'auto';
 		container.style.flexDirection = 'row';
 		container.style.justifyContent = 'center';
 		big.style.display = 'none';
@@ -206,6 +206,6 @@ let apelsin = document.querySelectorAll('img')[0];
 for (let i = 0; i < imageAmount; i++) {
 	document.querySelectorAll('img')[i].onclick = function() {
 		mouseClick(document.querySelectorAll('img')[i]);
-		document.body.style.height = '100vh';
+		$(document).height() = '100vh';
 	}
 }
