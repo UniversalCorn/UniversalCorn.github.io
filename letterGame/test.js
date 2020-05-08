@@ -163,13 +163,9 @@ menu.style.background = menuColor;
 let pageClose = document.getElementById('pageClose');
 pageClose.addEventListener('click', function() {
 	window.history.go(-1);
-	//window.history.pushState({ path: 'https://universalcorn.github.io/letterGame/main.html' }, '', 'https://universalcorn.github.io/letterGame/main.html');
-	//window.location.href = 'https://universalcorn.github.io/letterGame/main.html';
-	//location.reload();
 });
 let menuRepeat = document.getElementById('menuRepeat');
 	menuRepeat.addEventListener('click', function() {
-		//window.location.reload(true);
 		window.history.replaceState({ path: window.location.href }, '', window.location.href);
 });
 let menuArrow = document.getElementById('menuArrow');
