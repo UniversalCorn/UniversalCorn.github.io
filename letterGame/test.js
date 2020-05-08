@@ -1,6 +1,6 @@
-if (performance.navigation.type == 1) {
+/*if (performance.navigation.type == 1) {
 	console.log('lalka');
-    window.history.go(-1);
+    window.history.go(-1);*/
 }
 let sounds = [ 'a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3', 'j.mp3', 'z.mp3', 'i.mp3', 'y.mp3', 'k.mp3',
  'l.mp3', 'm.mp3', 'n.mp3', 'o.mp3', 'p.mp3', 'r.mp3', 's.mp3', 't.mp3', 'u.mp3', 'f.mp3', 'h.mp3', 'c.mp3', 'ch.mp3',
