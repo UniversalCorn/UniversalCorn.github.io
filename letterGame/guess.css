@@ -12,6 +12,9 @@ body {
 }
 
 #container {
+	position: relative;
+	top: 50%;
+	transfrom: translateY(-50%);
 	background-attachment: fixed;
 	background-size: cover;
 	margin: 0; 
