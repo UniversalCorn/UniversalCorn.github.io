@@ -164,7 +164,7 @@ let menu = document.getElementById('menu');
 menu.style.background = menuColor;
 let pageClose = document.getElementById('pageClose');
 pageClose.addEventListener('click', function() {
-	window.history.go(-1);
+	window.location.href = 'https://universalcorn.github.io/letterGame/main.html';
 });
 let menuRepeat = document.getElementById('menuRepeat');
 	menuRepeat.addEventListener('click', function() {
