@@ -80,7 +80,7 @@ function playAudio (strAudio) {
 
 function goBack () {
 	return function() {
-		window.location.href = document.referrer;
+		window.history.go(-1);
 	}
 }
 
