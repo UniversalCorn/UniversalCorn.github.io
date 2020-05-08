@@ -169,7 +169,7 @@ pageClose.addEventListener('click', function() {
 });
 let menuRepeat = document.getElementById('menuRepeat');
 	menuRepeat.addEventListener('click', function() {
-		location.reload;
+		location.reload();
 		//window.history.replaceState({ path: window.location.href }, '', window.location.href);
 });
 let menuArrow = document.getElementById('menuArrow');
