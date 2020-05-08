@@ -162,7 +162,7 @@ pageClose.addEventListener('click', function() {
 });
 let menuRepeat = document.getElementById('menuRepeat');
 	menuRepeat.addEventListener('click', function() {
-		window.history.replaceState({ path: 'https://universalcorn.github.io/letterGame/test.htm'l }, '', 'https://universalcorn.github.io/letterGame/test.html');
+		window.history.replaceState({ path: 'https://universalcorn.github.io/letterGame/test.html' }, '', 'https://universalcorn.github.io/letterGame/test.html');
 });
 let menuArrow = document.getElementById('menuArrow');
 menuArrow.addEventListener('click', function() {
