@@ -361,7 +361,7 @@ function Question() {
 				getBack.style.top = '15%';
 			},0)
 			getBack.addEventListener('click', function() {
-				window.history.go(-2);
+				window.history.go(-1);
 			})
 		}, 1000);
 	}
