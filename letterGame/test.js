@@ -165,7 +165,8 @@ pageClose.addEventListener('click', function() {
 });
 let menuRepeat = document.getElementById('menuRepeat');
 	menuRepeat.addEventListener('click', function() {
-		window.history.go(0);
+		location.reload;
+		window.history.go(-1);
 		//window.history.replaceState({ path: window.location.href }, '', window.location.href);
 });
 let menuArrow = document.getElementById('menuArrow');
