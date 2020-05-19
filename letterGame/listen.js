@@ -51,7 +51,7 @@ setInterval( function() {
 		}
 	}
 
-}, 0);
+}, 1);
 
 let audioStart = new Audio();
 audioStart.preload = 'auto';
