@@ -132,7 +132,7 @@ function mouseClick(image) {
 	innerImage.setAttribute('id', 'inner');
 	innerImage.style.margin = '0';
 	innerImage.style.width = '100%'
-	innerImage.style.height = '100%';
+	innerImage.style.height = innerImage.style.width;
 	innerImage.position = 'absolute';
 
 	closeImage.src = 'close.png';
