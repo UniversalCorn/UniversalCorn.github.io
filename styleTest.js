@@ -91,7 +91,7 @@ img1.style.width = '100%'; img1.style.height = '100%';
 let img2 = document.createElement('img');
 img2.setAttribute('id','img2');
 window2.appendChild(img2);
-img2.src = 'vova.png';
+img2.src = 'animal.jpg';
 img2.style.width = '100%'; img2.style.height = '100%';
 
 playB.addEventListener('click', function() {
