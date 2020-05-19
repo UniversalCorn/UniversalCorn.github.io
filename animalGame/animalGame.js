@@ -263,7 +263,7 @@ const foo161 = () => {
     table.style.padding = '10px';
     let span = document.createElement('span');
     table.appendChild(span);
-    span.innerText = `Игра окончена. Ты набрала ${count}`;
+    span.innerText = `Игра окончена. Ты набрал(а) ${count}`;
     if (count % 100 === 11) {
         span.innerText += ` очков.`;
       }
