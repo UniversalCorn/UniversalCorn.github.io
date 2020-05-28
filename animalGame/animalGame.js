@@ -252,6 +252,9 @@ const foo161 = () => {
         table.style.top = '10vh';
         span.style.fontSize = '3vw';
       }
+      figure.style.width = table.style.width;
+      figure.style.height = table.style.height;
+      figure.style.top = table.style.top;
     });
     table.style.background = 'rgba(50,50,50,0.5)';
     table.style.color = 'white';
