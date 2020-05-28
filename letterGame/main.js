@@ -248,6 +248,6 @@ $(document).ready(() => {
       url = window.location.protocol + '//' + window.location.host +
 			window.location.pathname + '?gender=Female';
     }
-    window.location.href = url;
+    window.history.pushState({ path: url }, '', url);
   });
 });
