@@ -1,4 +1,7 @@
 'use strict';
+const figure = document.getElementsByTagName('figure')[0];
+const list = document.getElementsByTagName('ul')[0];
+const figcap = document.getElementsByTagName('figcaption')[0];
 
 function checkViewport() {
   if (window.innerWidth < window.innerHeight) {
@@ -15,13 +18,11 @@ function checkViewport() {
     figcap.style.height = '10vw';
     figcap.style.fontSize = '9vw';
 
-    document.getElementsByTagName('button')[0].style.margin = `0`;
-    document.getElementsByTagName('button')[1].style.margin = `${(window.innerHeight - (figure.offsetTop + figure.offsetHeight))/10}px 0`;
-    document.getElementsByTagName('button')[2].style.margin = `0`;
-
- 
-  }
-  else {
+    document.getElementsByTagName('button')[0].style.margin = '0';
+    document.getElementsByTagName('button')[1].style.margin =
+    '${(window.innerHeight - (figure.offsetTop + figure.offsetHeight))/10}px 0';
+    document.getElementsByTagName('button')[2].style.margin = '0';
+  } else {
     for (let i = 0; i < 3; i++) {
       document.getElementsByTagName('li')[i].style.display = 'inline';
       document.getElementsByTagName('button')[i].style.width = '18vw';
@@ -44,34 +45,31 @@ const pics = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg',
 const names = ['Лев', 'Гепард', 'Панда', 'Зебра', 'Слон', 'Обезьяна', 'Ёж',
   'Мышка', 'Лимур', 'Броненосец', 'Тукан', 'Рысь', 'Енот', 'Овечка', 'Пингвин',
   'Колибри' ];
-  const back = ["url('background1.jpg')", "url('background2.jpg')", "url('background3.jpg')", "url('background4.jpg')", "url('background5.jpg')", "url('background6.jpg')", "url('background7.jpg')", "url('background8.jpg')", 
-  "url('background9.jpg')", "url('background10.jpg')", "url('background11.jpg')", "url('background12.jpg')", "url('background13.jpg')", "url('background14.jpg')", "url('background15.jpg')", "url('background16.jpg')"];
+const back = ['url("background1.jpg")', 'url("background2.jpg")',
+  'url("background3.jpg")', 'url("background4.jpg")', 'url("background5.jpg")',
+  'url("background6.jpg")', 'url("background7.jpg")', 'url("background8.jpg")',
+  'url("background9.jpg")', 'url("background10.jpg")',
+  'url("background11.jpg")', 'url("background12.jpg")',
+  'url("background13.jpg")', 'url("background14.jpg")',
+  'url("background15.jpg")', 'url("background16.jpg")'];
 let count = 0;
 
 document.body.style.backgroundImage = 'background1.jpg';
 document.body.style.backgroundSize = 'cover';
 
-const figure = document.getElementsByTagName('figure')[0];
-const x = (window.innerWidth / 2) - (figure.offsetWidth / 3.5) + 'px';
-const y = (window.innerHeight/2) - (figure.offsetHeight / 3) + 'px';
 figure.style.position = 'absolute';
-setInterval(function() {
-  figure.style.left = window.innerWidth/2 - figure.offsetWidth/2 + 'px';
-},0);
-
-const figcap = document.getElementsByTagName('figcaption')[0];
+setInterval(() => {
+  figure.style.left = window.innerWidth / 2 - figure.offsetWidth / 2 + 'px';
+}, 0);
 
 const image = document.getElementsByTagName('img')[0];
 image.style.width = '100%';
 image.style.height = '100%';
 
-const list = document.getElementsByTagName('ul')[0];
 list.style.position = 'absolute';
-let buttonsTimer = setInterval(function() {
-list.style.left = window.innerWidth/2 - list.offsetWidth/2 + 'px';
-for (let i = 0; i < 3; i++) {
-}
-},0);
+const buttonsTimer = setInterval(() => {
+  list.style.left = window.innerWidth / 2 - list.offsetWidth / 2 + 'px';
+}, 0);
 
 
 const b1 = document.getElementById('b1');
@@ -179,10 +177,12 @@ const foo82 = () => {
 };
 
 const foo91 = () => {
-  change('Крыса', 'Броненосец', 'Морская свинка', pics[9], names[8], b1, b2, b3);
+  change('Крыса', 'Броненосец', 'Морская свинка',
+    pics[9], names[8], b1, b2, b3);
 };
 const foo92 = () => {
-  change('Крыса', 'Броненосец', 'Морская свинка', pics[9], names[8], b1, b2, b3);
+  change('Крыса', 'Броненосец', 'Морская свинка',
+    pics[9], names[8], b1, b2, b3);
   count++;
 };
 
@@ -236,17 +236,17 @@ const foo152 = () => {
 
 const foo161 = () => {
   change('Воробей', 'Синичка', 'Колибри', pics[16], names[15], b3, b1, b2);
-  setTimeout(function () {
-    let table = document.createElement('div');
+  setTimeout(() => {
+    const table = document.createElement('div');
     document.body.appendChild(table);
-    setInterval(function() {
+    const span = document.createElement('span');
+    setInterval(() => {
       if (window.innerWidth < window.innerHeight) {
-      table.style.width = '80vw';
-      table.style.height = '50vw';
-      table.style.top = '2vh';
-      span.style.fontSize = '6vw';
-      }
-      else {
+        table.style.width = '80vw';
+        table.style.height = '50vw';
+        table.style.top = '2vh';
+        span.style.fontSize = '6vw';
+      } else {
         table.style.width = '40vw';
         table.style.height = '25vw';
         table.style.top = '10vh';
@@ -259,65 +259,66 @@ const foo161 = () => {
     table.style.background = 'rgba(50,50,50,0.5)';
     table.style.color = 'white';
     table.style.position = 'absolute';
-    setInterval(function() {
-      table.style.left = (window.innerWidth / 2) - (table.offsetWidth / 2) + 'px';
+    setInterval(() => {
+      table.style.left = (window.innerWidth / 2) -
+      (table.offsetWidth / 2) + 'px';
     });
     table.style.display = 'inline-block';
     table.style.padding = '10px';
-    let span = document.createElement('span');
     table.appendChild(span);
     span.innerText = `Игра окончена. Ты набрал(а) ${count}`;
     if (count % 100 === 11) {
-        span.innerText += ` очков.`;
-      }
-      else if ((count % 10 === 1) && (count % 100 !== 11)) {
-        span.innerText += ` очко.`;
-      }
-      else if ( (count % 10 === 2) || (count % 10 === 3) || (count % 10 === 4) ) {
-        span.innerText += ` очка.`;
-      }
-      else if ( (count % 10 === 5) || (count % 10 === 6) || (count % 10 === 7) || (count % 10 === 8) || (count % 10 === 9) || (count % 10 === 0)) {
-        span.innerText += ` очков.`;
-      }    span.style.position = 'relative';
+      span.innerText += ' очков.';
+    } else if ((count % 10 === 1) && (count % 100 !== 11)) {
+      span.innerText += ' очко.';
+    } else if ((count % 10 === 2) || (count % 10 === 3) ||
+    (count % 10 === 4)) {
+      span.innerText += ' очка.';
+    } else if ((count % 10 === 5) || (count % 10 === 6) ||
+    (count % 10 === 7) || (count % 10 === 8) || (count % 10 === 9) ||
+    (count % 10 === 0)) {
+      span.innerText += ' очков.';
+    }
+    span.style.position = 'relative';
     span.style.top = '30%';
     span.style.left = '10px';
     span.style.width = '90%';
     span.style.fontSize = '3vw';
-    let finb = document.createElement('button');
+    const finb = document.createElement('button');
     document.body.appendChild(finb);
     finb.innerText = 'OK';
     finb.style.position = 'absolute';
     finb.style.width = '18vw';
-    finb.style.top = '85vh'
-    setInterval(function() {
-      finb.style.left = (window.innerWidth/2) - (finb.offsetWidth)/2 + 'px';
+    finb.style.top = '85vh';
+    setInterval(() => {
+      finb.style.left = (window.innerWidth / 2) - (finb.offsetWidth) / 2 + 'px';
     });
     clearInterval(buttonsTimer);
     b1.parentNode.removeChild(b1);
     b2.parentNode.removeChild(b2);
     b3.parentNode.removeChild(b3);
-    finb.addEventListener('click', function () {
+    finb.addEventListener('click', () => {
       table.parentNode.removeChild(table);
-      setTimeout(function() {
+      setTimeout(() => {
         location.reload(true);
       }, 1000);
     });
-}, 1300);
+  }, 1300);
 };
 const foo162 = () => {
   change('Воробей', 'Синичка', 'Колибри', pics[16], names[15], b3, b1, b2);
   count++;
-  setTimeout(function () {
-    let table = document.createElement('div');
+  setTimeout(() => {
+    const table = document.createElement('div');
     document.body.appendChild(table);
-    setInterval(function() {
+    const span = document.createElement('span');
+    setInterval(() => {
       if (window.innerWidth < window.innerHeight) {
-      table.style.width = '80vw';
-      table.style.height = '50vw';
-      table.style.top = '2vh';
-      span.style.fontSize = '6vw';
-      }
-      else {
+        table.style.width = '80vw';
+        table.style.height = '50vw';
+        table.style.top = '2vh';
+        span.style.fontSize = '6vw';
+      } else {
         table.style.width = '40vw';
         table.style.height = '25vw';
         table.style.top = '10vh';
@@ -327,45 +328,43 @@ const foo162 = () => {
     table.style.background = 'rgba(50, 50, 50, 0.5)';
     table.style.color = 'white';
     table.style.position = 'relative';
-    setInterval(function() {
-      table.style.left = (window.innerWidth / 2) - (table.offsetWidth / 2) + 'px';
+    setInterval(() => {
+      table.style.left = (window.innerWidth / 2) -
+      (table.offsetWidth / 2) + 'px';
     });
     table.style.display = 'inline-block';
     table.style.padding = '10px';
-    let span = document.createElement('span');
     table.appendChild(span);
     span.innerText = `Игра окончена. Ты набрала ${count}`;
     if (count % 100 === 11) {
-        span.innerText += ` очков.`;
-      }
-      else if ((count % 10 === 1) && (count % 100 !== 11)) {
-        span.innerText += ` очко.`;
-      }
-      else if ( (count % 10 === 2) || (count % 10 === 3) || (count % 10 === 4) ) {
-        span.innerText += ` очка.`;
-      }
-      else if ( (count % 10 === 5) || (count % 10 === 6) || (count % 10 === 7) || (count % 10 === 8) || (count % 10 === 9) || (count % 10 === 0)) {
-        span.innerText += ` очков.`;
-      }
+      span.innerText += ' очков.';
+    } else if ((count % 10 === 1) && (count % 100 !== 11)) {
+      span.innerText += ' очко.';
+    } else if ((count % 10 === 2) || (count % 10 === 3) || (count % 10 === 4)) {
+      span.innerText += ' очка.';
+    } else if ((count % 10 === 5) || (count % 10 === 6) || (count % 10 === 7) ||
+    (count % 10 === 8) || (count % 10 === 9) || (count % 10 === 0)) {
+      span.innerText += ' очков.';
+    }
     span.style.position = 'relative';
     span.style.top = '30%';
     span.style.left = '10px';
     span.style.width = '90%';
-    let finb = document.createElement('button');
+    const finb = document.createElement('button');
     document.body.appendChild(finb);
     finb.innerText = 'OK';
     finb.style.position = 'absolute';
-    finb.style.width = '18vw';  
+    finb.style.width = '18vw';
     finb.style.top = '85vh';
-    setInterval(function() {
-      finb.style.left = (window.innerWidth/2) - (finb.offsetWidth)/2 + 'px';
+    setInterval(() => {
+      finb.style.left = (window.innerWidth / 2) - (finb.offsetWidth) / 2 + 'px';
     });
     clearInterval(buttonsTimer);
     b1.parentNode.removeChild(b1);
     b2.parentNode.removeChild(b2);
     b3.parentNode.removeChild(b3);
-    finb.addEventListener('click', function () {
-      setTimeout(function() {
+    finb.addEventListener('click', () => {
+      setTimeout(() => {
         location.reload(true);
       }, 1000);
       table.parentNode.removeChild(table);
@@ -376,14 +375,12 @@ const foo162 = () => {
 
 
 const otherPic = () => {
-  //1
   if (i === 0) {
     b1.addEventListener('click', foo11);
     b2.addEventListener('click', foo12);
     b3.addEventListener('click', foo11);
   }
 
-  //2
   if (i === 1) {
     b1.removeEventListener('click', foo11);
     b2.removeEventListener('click', foo12);
@@ -524,6 +521,6 @@ otherPic();
 
 addEventListener('click', otherPic);
 
-setInterval( function () {
+setInterval(() => {
   checkViewport();
 }, 1);
