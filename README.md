@@ -1,4 +1,4 @@
-                                                                1. Проект
+                                                                ## Проект
         Данный проект по сути представляет собой объединение двух веб-приложений: Learn Letters и Guess Animal. Главная страница styleTest.html(https://universalcorn.github.io/styleTest.html) содержит в себе ссылки на оба приложения.
 
                                                                 2. Learn Letters
