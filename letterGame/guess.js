@@ -118,11 +118,14 @@ function mouseClick(image) {
   big.appendChild(closeImage);
   big.appendChild(listenImage);
   container.appendChild(text);
+  document.body.style.display = 'flex';
   container.style.flexDirection = 'column';
   container.style.justifyContent = 'center';
   big.style.display = 'inline-block';
   big.style.border = '1vw solid #e75480';
   big.style.position = 'relative';
+  big.style.width = '70vmin';
+  big.style.height = '70vmin';
 
   innerImage.src = image.src;
   innerImage.setAttribute('id', 'inner');
@@ -134,15 +137,11 @@ function mouseClick(image) {
   closeImage.src = 'close.png';
   setInterval(() => {
     if (window.innerWidth < window.innerHeight) {
-      big.style.width = '70%';
-      big.style.height = window.innerWidth / 10 * 7 + 'px';
       closeImage.style.width = '12.5%';
       closeImage.style.height = big.offsetWidth / 8 + 'px';
       listenImage.style.width = '12.5%';
       listenImage.style.height = big.offsetWidth / 8 + 'px';
     } else {
-      big.style.height = '70%';
-      big.style.width = window.innerHeight / 10 * 7 + 'px';
       closeImage.style.height = '12.5%';
       closeImage.style.width = big.offsetHeight / 8 + 'px';
       listenImage.style.height = '12.5%';
@@ -159,6 +158,7 @@ function mouseClick(image) {
   closeImage.style.top = '2%';
   closeImage.onmouseover = mouseOver(closeImage);
   closeImage.addEventListener('click', () => {
+    document.body.style.display = 'block';
     container.style.flexDirection = 'row';
     container.style.justifyContent = 'center';
     big.style.display = 'none';
