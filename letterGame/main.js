@@ -243,11 +243,11 @@ let url = '';
 $(document).ready(() => {
   $('input[type="checkbox"]').click(() => {
     if ($(this).prop('checked') === true) {
-      menu.style.backgroundColor = 'white';
+      menu.style.color = 'yellow';
       url = window.location.protocol + '//' + window.location.host +
 			window.location.pathname + '?gender=Male';
     } else if ($(this).prop('checked') === false) {
-      menu.style.backgroundColor = 'darkgray';
+      menu.style.color = 'red';
       url = window.location.protocol + '//' + window.location.host +
 			window.location.pathname + '?gender=Female';
     }
