@@ -240,14 +240,15 @@ for (let i = 0; i < 3; i++) {
 }
 
 let url = '';
-$(document).ready(function(){
-    $('input[type="checkbox"]').click(function(){
-        if($(this).prop("checked") == true){
-            url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Male';    
-        }
-        else if($(this).prop("checked") == false){
-           url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Female';
-        }
-        window.history.pushState({ path: url }, '', url);
-    });
+$(document).ready(() => {
+  $('input[type="checkbox"]').click(() => {
+    if ($(this).prop('checked') === true) {
+      url = window.location.protocol + '//' + window.location.host +
+			window.location.pathname + '?gender=Male';
+    } else if ($(this).prop('checked') === false) {
+      url = window.location.protocol + '//' + window.location.host +
+			window.location.pathname + '?gender=Female';
+    }
+    window.history.pushState({ path: url }, '', url);
+  });
 });
