@@ -20,6 +20,8 @@ const ratio = {
   'mesyac': 'месяц',
 };
 
+document.body.style.display = 'block';
+
 const imageAmount = Object.keys(ratio).length;
 let imageTopPosition = 0;
 
