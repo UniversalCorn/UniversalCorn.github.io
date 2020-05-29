@@ -25,14 +25,6 @@ window.scrollTo(0, document.body.scrollHeight);
 
 const headliner = document.getElementById('headliner');
 
-if ((document.referrer === 'https://universalcorn.github.io/letterGame/listen.html') ||
-(document.referrer === 'https://universalcorn.github.io/letterGame/test.html') ||
-(document.referrer === 'https://universalcorn.github.io/letterGame/guess.html')) {
-  headliner.style.display = 'none';
-} else {
-  headliner.style.display = 'block';
-}
-
 headliner.style.background = 'rgba(256, 64, 64, 0.7)';
 headliner.style.left = -headliner.offsetWidth + 'px';
 setInterval(() => {
