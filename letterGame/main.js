@@ -254,9 +254,11 @@ $(document).ready(function(){
 
 function checkFirstVisit() {
   if (document.cookie.indexOf('mycookie') == -1) {
-    document.cookie = 'mycookie = 1';
+    document.cookie = 'mycookie=1';
     headliner.style.display = 'block';
   } else {
     headliner.style.display = 'none';
   }
 }
+
+checkFirstVisit();
