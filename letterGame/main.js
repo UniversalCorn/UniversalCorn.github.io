@@ -251,3 +251,12 @@ $(document).ready(function(){
       window.history.pushState({ path: url }, '', url);
   });
 });
+
+function checkFirstVisit() {
+  if (document.cookie.indexOf('mycookie') == -1) {
+    document.cookie = 'mycookie = 1';
+    headliner.style.display = 'block';
+  } else {
+    headliner.style.display = 'none';
+  }
+}
