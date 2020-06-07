@@ -61,11 +61,17 @@ audioStart.src = 'нажми' + genderStr;
 const playB = document.getElementById('play');
 playB.onmousedown = playButton();
 
+let obj = {};
 function playButton() {
   return function() {
     for (let i = 0; i <= picsAmount; i++) {
-      document.getElementsByClassName('letter')[i].style.display =
-	'inline-block';
+      obj = document.createElement('div');
+      obj.innerText = String.fromCharCode(i + 1072);
+      document.body.appendChild(obj);
+      obj.style.display = 'inline-block';
+      obj.setAttribute = ('class', 'letter');
+      //document.getElementsByClassName('letter')[i].style.display =
+	//'inline-block';
       playB.style.display = 'none';
       setTimeout(() => {
         audioStart.play();
