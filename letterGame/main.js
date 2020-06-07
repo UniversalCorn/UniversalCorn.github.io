@@ -24,6 +24,7 @@ if (rand === 0) {
 window.scrollTo(0, document.body.scrollHeight);
 
 const headliner = document.getElementById('headliner');
+const divisor = 250;
 
 headliner.style.background = 'rgba(256, 64, 64, 0.7)';
 headliner.style.left = -headliner.offsetWidth + 'px';
@@ -44,7 +45,7 @@ function moveOuter() {
   const timer = setInterval(() => {
     const timePassed = Date.now() - start;
     if ((Number((headliner.style.left).slice(0, -2))) >
-		((window.innerWidth / 2) - (headliner.offsetWidth / 2))) {
+	((window.innerWidth / 2) - (headliner.offsetWidth / 2))) {
       setTimeout(() => {
         moveInner();
       }, 1500);
@@ -76,7 +77,7 @@ function draw(timePassed) {
 
 function drawInner(timePassed) {
   headliner.style.left = (timePassed * 2) +
-	window.innerWidth / 2 - headliner.offsetWidth / 2 + 'px';
+  window.innerWidth / 2 - headliner.offsetWidth / 2 + 'px';
 }
 
 const settings = document.getElementById('settings');
@@ -144,12 +145,12 @@ function MoveRight() {
 }
 
 function DrawLeft(timePassed) {
-  menu.style.left = -(timePassed * window.innerWidth / 250 -
-		menu.offsetWidth) + 'px';
+  menu.style.left = -(timePassed * window.innerWidth / divisor -
+  menu.offsetWidth) + 'px';
 }
 
 function DrawRight(timePassed) {
-  menu.style.left = timePassed * window.innerWidth / 250 + 'px';
+  menu.style.left = timePassed * window.innerWidth / divisor + 'px';
 }
 
 settings.style.position = 'fixed';
@@ -159,7 +160,7 @@ settings.addEventListener('click', () => {
   menuArrow.style.pointerEvents = 'none';
   setTimeout(() => {
     menuArrow.style.pointerEvents = 'auto';
-  }, window.innerWidth / 250);
+  }, window.innerWidth / divisor);
   MoveLeft();
 });
 
@@ -175,11 +176,11 @@ setInterval(() => {
     document.getElementById('womanSpan').style.fontSize = '8vw';
     document.getElementById('manSpan').style.fontSize = '8vw';
     document.getElementsByClassName('innerTumbler')[0].style.flexDirection =
-		'column';
+    'column';
     document.getElementsByClassName('innerTumbler')[0].style.alignItems =
     'center';
     document.getElementsByClassName('switch')[0].style.transform =
-		'rotate(90deg)';
+    'rotate(90deg)';
     document.getElementsByClassName('switch')[0].style.bottom = '0';
     document.getElementsByClassName('check')[0].style.height = '45%';
     document.getElementsByClassName('tumbler')[0].style.height = '45%';
@@ -190,11 +191,11 @@ setInterval(() => {
     document.getElementById('womanSpan').style.fontSize = '3vw';
     document.getElementById('manSpan').style.fontSize = '3vw';
     document.getElementsByClassName('innerTumbler')[0].style.flexDirection =
-		'row';
+    'row';
     document.getElementsByClassName('innerTumbler')[0].style.alignItems =
-		'center';
+    'center';
     document.getElementsByClassName('switch')[0].style.transform =
-		'rotate(0deg)';
+    'rotate(0deg)';
     document.getElementsByClassName('switch')[0].style.bottom = '3vw';
     document.getElementsByClassName('check')[0].style.height = '35%';
     document.getElementsByClassName('tumbler')[0].style.height = '55%';
@@ -225,17 +226,19 @@ listen.addEventListener('click', () => {
 
 for (let i = 0; i < 3; i++) {
   document.getElementsByTagName('img')[i].onmousedown =
-	mouseDown(document.getElementsByTagName('img')[i], links[i]);
+  mouseDown(document.getElementsByTagName('img')[i], links[i]);
 }
 
 let url = '';
-$(document).ready(function(){
-  $('input[type="checkbox"]').click(function(){
-      if($(this).prop("checked") == true){
-          url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Male';    
+$(document).ready(function() {
+  $('input[type="checkbox"]').click(function() {
+      if($(this).prop("checked") == true) {
+          url = window.location.protocol + "//" + window.location.host +
+	  window.location.pathname + '?gender=Male';    
       }
-      else if($(this).prop("checked") == false){
-         url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?gender=Female';
+      else if($(this).prop("checked") == false) {
+         url = window.location.protocol + "//" + window.location.host +
+	 window.location.pathname + '?gender=Female';
       }
       window.history.pushState({ path: url }, '', url);
   });
