@@ -25,7 +25,6 @@ currentSound.src = '';
 const back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 const backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
-
 const rand = Math.floor(Math.random() * back.length);
 const randBack = back[rand];
 const randVertBack = backVert[rand];
@@ -55,16 +54,16 @@ if (document.referrer.substr(document.referrer.length - 6) === 'r=Male') {
   window.history.replaceState({ path: url }, '', url);
 }
 
-
 setInterval(() => {
   if (window.innerWidth < window.innerHeight / 1.5) {
     for (let i = 0; i < 33; i++) {
       document.getElementsByClassName('letter')[i].style.transform =
-			'scale(1.2)';
+      'scale(1.2)';
     }
   } else {
     for (let i = 0; i < 33; i++) {
-      document.getElementsByClassName('letter')[i].style.transform = 'scale(1)';
+      document.getElementsByClassName('letter')[i].style.transform =
+      'scale(1)';
     }
   }
 
@@ -80,7 +79,6 @@ setInterval(() => {
     }
   }
 }, 1);
-
 
 const menu = document.getElementById('menu');
 menu.style.background = menuColor;
@@ -120,14 +118,13 @@ function playButton() {
       Question();
       for (let i = 0; i < 33; i++) {
         document.getElementsByClassName('letter')[i].style.display =
-				'inline-block';
+	'inline-block';
         document.getElementById('listen').style.display = 'inline-block';
         document.getElementById('settings').style.display = 'inline-block';
       }
     }, 2250);
   };
 }
-
 
 function MoveLeft() {
   const start = Date.now();
@@ -365,8 +362,8 @@ function Question() {
     }, 1000);
   } else {
     letterSound.src = sounds[Math.floor(Math.random() *
-			(sounds.length - 1))].replace(/^.*[\\\/]/, '').slice(0, -4) +
-			genderStr;
+    (sounds.length - 1))].replace(/^.*[\\\/]/, '').slice(0, -4) +
+    genderStr;
     const fileName = letterSound.src.replace(/^.*[\\\/]/, '');
     letterSound.play();
     for (let i = 0; i < sounds.length; i++) {
@@ -382,7 +379,7 @@ function Question() {
     }
     for (let i = 0; i < 33; i++) {
       if (document.getElementsByClassName('letter')[i].innerText ===
-			rememberSound) {
+      rememberSound) {
         document.getElementsByClassName('letter')[i].addEventListener('click', () => {
           document.getElementsByClassName('letter')[i].style.background = 'rgba(50, 250, 50, 0.5)';
           document.getElementsByClassName('letter')[i].style.outline = '2vw solid rgba(50, 250, 50, 0.5)';
