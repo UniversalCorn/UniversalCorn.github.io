@@ -106,7 +106,7 @@ function goBack() {
 const backButton = document.getElementById('back');
 backButton.onmousedown = goBack();
 
-for (let i = 0; i < picsAmount; i++) {
+for (let i = 1; i <= picsAmount; i++) {
   document.querySelectorAll('.letter')[i].onmousedown =
   playAudio(sounds[i].replace(/^.*[\\\/]/, '').slice(0, -4) + genderStr);
 }
