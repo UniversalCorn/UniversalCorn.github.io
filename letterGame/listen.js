@@ -25,9 +25,11 @@ if (rand === 0) {
 }
 
 let genderStr = 'F.mp3';
-if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Male') {
+if (document.referrer ===
+'https://universalcorn.github.io/letterGame/main.html?gender=Male') {
   genderStr = 'M.mp3';
-} else if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Female') {
+} else if (document.referrer ===
+'https://universalcorn.github.io/letterGame/main.html?gender=Female') {
   genderStr = 'F.mp3';
 }
 
@@ -46,7 +48,8 @@ setInterval(() => {
     }
   } else {
     for (let i = 0; i < picsAmount; i++) {
-      document.getElementsByClassName('letter')[i].style.transform = 'scale(1)';
+      document.getElementsByClassName('letter')[i].style.transform =
+	'scale(1)';
     }
   }
 }, 1);
@@ -62,7 +65,7 @@ function playButton() {
   return function() {
     for (let i = 0; i <= picsAmount; i++) {
       document.getElementsByClassName('letter')[i].style.display =
-			'inline-block';
+	'inline-block';
       playB.style.display = 'none';
       setTimeout(() => {
         audioStart.play();
@@ -91,5 +94,5 @@ backButton.onmousedown = goBack();
 
 for (let i = 0; i < picsAmount; i++) {
   document.querySelectorAll('.letter')[i].onmousedown =
-	playAudio(sounds[i].replace(/^.*[\\\/]/, '').slice(0, -4) + genderStr);
+  playAudio(sounds[i].replace(/^.*[\\\/]/, '').slice(0, -4) + genderStr);
 }
