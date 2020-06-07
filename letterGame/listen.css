@@ -16,9 +16,9 @@ body {
 }
 
 .letter {
-	display: none;
+  display: none;
   margin: 5vw;
-  font-size: 7vw;
+  font-size: 10vw;
   padding: 0;
   user-select: none;
 }
