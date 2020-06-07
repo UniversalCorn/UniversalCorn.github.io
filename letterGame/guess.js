@@ -47,7 +47,6 @@ if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?
   genderStr = 'F.mp3';
 }
 
-
 const container = document.getElementById('container');
 
 setInterval(() => {
@@ -76,7 +75,6 @@ close.addEventListener('click', () => {
   window.history.go(-1);
 });
 
-
 function mouseOver(target) {
   return function() {
     target.style.cursor = 'pointer';
@@ -90,7 +88,6 @@ for (let i = 0; i < imageAmount; i++) {
   document.getElementsByTagName('img')[i].style.background =
 	'rgba(0, 0, 0, 0.3)';
 }
-
 
 setInterval(() => {
   if (window.innerWidth < window.innerHeight) {
