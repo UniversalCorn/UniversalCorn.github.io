@@ -118,7 +118,7 @@ const aside = document.getElementsByClassName('aside')[0];
 
 const menuArrow = document.getElementById('menuArrow');
 
-function MoveLeft() {
+function moveLeft() {
   const start = Date.now();
   const timer = setInterval(() => {
     const timePassed = Date.now() - start;
@@ -127,11 +127,11 @@ function MoveLeft() {
       clearInterval(timer);
       return;
     }
-    DrawLeft(timePassed);
+    drawLeft(timePassed);
   }, 0);
 }
 
-function MoveRight() {
+function moveRight() {
   const start = Date.now();
   const timer = setInterval(() => {
     const timePassed = Date.now() - start;
@@ -140,16 +140,16 @@ function MoveRight() {
       clearInterval(timer);
       return;
     }
-    DrawRight(timePassed);
+    drawRight(timePassed);
   }, 0);
 }
 
-function DrawLeft(timePassed) {
+function drawLeft(timePassed) {
   menu.style.left = -(timePassed * window.innerWidth / divisor -
   menu.offsetWidth) + 'px';
 }
 
-function DrawRight(timePassed) {
+function drawRight(timePassed) {
   menu.style.left = timePassed * window.innerWidth / divisor + 'px';
 }
 
@@ -161,7 +161,7 @@ settings.addEventListener('click', () => {
   setTimeout(() => {
     menuArrow.style.pointerEvents = 'auto';
   }, window.innerWidth / divisor);
-  MoveLeft();
+  moveLeft();
 });
 
 setInterval(() => {
@@ -210,7 +210,7 @@ menuArrow.addEventListener('click', () => {
   setTimeout(() => {
     menuArrow.style.pointerEvents = 'auto';
   }, window.innerWidth);
-  MoveRight();
+  moveRight();
 });
 
 const checkAudio = new Audio();
