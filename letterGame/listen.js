@@ -5,14 +5,6 @@ const sounds = ['a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3',
   'c.mp3', 'ch.mp3', 'sh.mp3', 'shch.mp3', 'tver.mp3', 'yy.mp3', 'myag.mp3',
   'e.mp3', 'yu.mp3', 'ya.mp3'];
 
-let obj = {};
-for (let i = 0; i <= picsAmount; i++) {
-      obj = document.createElement('div');
-      obj.innerText = String.fromCharCode(i + 1072);
-      document.body.appendChild(obj);
-      obj.setAttribute('class', 'letter');
-}
-
 const picsAmount = 33;
 
 const back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
@@ -68,6 +60,14 @@ audioStart.src = 'нажми' + genderStr;
 
 const playB = document.getElementById('play');
 playB.onmousedown = playButton();
+
+let obj = {};
+for (let i = 0; i <= picsAmount; i++) {
+      obj = document.createElement('div');
+      obj.innerText = String.fromCharCode(i + 1072);
+      document.body.appendChild(obj);
+      obj.setAttribute('class', 'letter');
+}
 
 function playButton() {
   return function() {
