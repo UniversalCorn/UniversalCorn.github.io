@@ -5,6 +5,8 @@ const sounds = ['a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3',
   'c.mp3', 'ch.mp3', 'sh.mp3', 'shch.mp3', 'tver.mp3', 'yy.mp3', 'myag.mp3',
   'e.mp3', 'yu.mp3', 'ya.mp3'];
 
+const picsAmount = 33;
+
 const back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 const backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
@@ -29,7 +31,6 @@ if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?
   genderStr = 'F.mp3';
 }
 
-
 setInterval(() => {
   if (window.innerWidth < window.innerHeight) {
     document.body.style.backgroundImage = `url(${randVertBack})`;
@@ -39,16 +40,15 @@ setInterval(() => {
   }
 
   if (window.innerWidth < window.innerHeight / 1.5) {
-    for (let i = 0; i < 33; i++) {
+    for (let i = 0; i < picsAmount; i++) {
       document.getElementsByClassName('letter')[i].style.transform =
-			'scale(1.2)';
+	'scale(1.2)';
     }
   } else {
-    for (let i = 0; i < 33; i++) {
+    for (let i = 0; i < picsAmount; i++) {
       document.getElementsByClassName('letter')[i].style.transform = 'scale(1)';
     }
   }
-
 }, 1);
 
 const audioStart = new Audio();
@@ -60,7 +60,7 @@ playB.onmousedown = playButton();
 
 function playButton() {
   return function() {
-    for (let i = 0; i < 34; i++) {
+    for (let i = 0; i <= picsAmount; i++) {
       document.getElementsByClassName('letter')[i].style.display =
 			'inline-block';
       playB.style.display = 'none';
@@ -86,11 +86,10 @@ function goBack() {
   };
 }
 
-
 const backButton = document.getElementById('back');
 backButton.onmousedown = goBack();
 
-for (let i = 0; i < 33; i++) {
+for (let i = 0; i < picsAmount; i++) {
   document.querySelectorAll('.letter')[i].onmousedown =
 	playAudio(sounds[i].replace(/^.*[\\\/]/, '').slice(0, -4) + genderStr);
 }
