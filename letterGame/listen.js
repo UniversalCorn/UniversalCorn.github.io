@@ -64,7 +64,12 @@ playB.onmousedown = playButton();
 let obj = {};
 for (let i = 0; i <= picsAmount; i++) {
       obj = document.createElement('div');
-      obj.innerText = String.fromCharCode(i + 1072);
+      if (i < 6) {
+      	obj.innerText = String.fromCharCode(i + 1072);
+      } else if (i > 6) {
+	obj.innerText = String.fromCharCode(i + 1073);
+      } else {
+	obj.innerText = String.fromCharCode(1105);
       document.body.appendChild(obj);
       obj.setAttribute('class', 'letter');
 }
