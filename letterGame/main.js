@@ -70,8 +70,6 @@ function moveInner() {
   }, 10);
 }
 
-
-
 function draw(timePassed) {
   headliner.style.left = (timePassed * 2)  - headliner.offsetWidth + 'px';
 }
@@ -224,7 +222,6 @@ listen.style.height = listen.style.width;
 listen.addEventListener('click', () => {
   checkAudio.play();
 });
-
 
 for (let i = 0; i < 3; i++) {
   document.getElementsByTagName('img')[i].onmousedown =
