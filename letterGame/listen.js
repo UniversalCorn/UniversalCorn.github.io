@@ -10,7 +10,7 @@ for (let i = 0; i <= picsAmount; i++) {
       obj = document.createElement('div');
       obj.innerText = String.fromCharCode(i + 1072);
       document.body.appendChild(obj);
-      obj.setAttribute = ('class', 'letter');
+      obj.setAttribute('class', 'letter');
 }
 
 const picsAmount = 33;
