@@ -69,7 +69,7 @@ for (let i = 0; i <= picsAmount; i++) {
       } else if (i > 6) {
 	obj.innerText = String.fromCharCode(i + 1073);
       } else {
-	obj.innerText = String.fromCharCode(1105);
+	obj.innerText = String.fromCharCode(11);
       document.body.appendChild(obj);
       obj.setAttribute('class', 'letter');
 }
