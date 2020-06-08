@@ -21,7 +21,6 @@ body {
   font-size: 12vmin;
   padding: 0;
   user-select: none;
-  transform: scale(3);
 }
 
 #play {
@@ -38,10 +37,4 @@ body {
 
 img,div:hover {
   cursor: pointer;
-}
-
-@media screen and (min-aspect-ratio: ~'2/3') {
-	.letter {
-		transform: scale(1);
-	}
 }
