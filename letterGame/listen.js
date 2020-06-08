@@ -9,8 +9,8 @@ const picsAmount = 33;
 
 import {createLetters} from './createLetters.js';
 createLetters(picsAmount);
-import {genderStr, defineGender} from './defineGender.js';
-defineGender();
+import {genderStr, setGender} from './setGender.js';
+setGender();
 
 const back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 const backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
