@@ -6,6 +6,8 @@ const container = document.getElementById('container');
 import {back, backVert, rand, randBack, randVertBack} from './setBackAndRand.js';
 import {menuColor, setMenuColor} from './setMenuColor.js';
 setMenuColor();
+import {setBackImage} from './setBackImage.js';
+setBackImage(container);
 
 window.scrollTo(0, document.body.scrollHeight);
 
@@ -19,10 +21,8 @@ setInterval(() => {
 	headliner.offsetHeight / 2 + 'px';
   if (window.innerWidth < window.innerHeight) {
     headliner.style.width = '60%';
-    container.style.backgroundImage = `url(${randVertBack})`;
   } else {
     headliner.style.width = '40%';
-    container.style.backgroundImage = `url(${randBack})`;
   }
 }, 0);
 
