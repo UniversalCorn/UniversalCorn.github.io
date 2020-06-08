@@ -31,12 +31,16 @@ body {
 #listen,
 #settings {
 	display: none;
+	position: fixed;
+	bottom: 0.5vw;
+}
+
+#listen {
+	left: 0.5vw;
 }
 
 #settings {
-	position: fixed;
 	right: 0.5vw;
-	bottom: 0.5vw;
 }
 
 #menu {
