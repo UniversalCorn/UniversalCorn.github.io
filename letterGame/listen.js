@@ -12,6 +12,8 @@ import {createLetters} from './createLetters.js';
 createLetters(picsAmount);
 import {genderStr, setGender} from './setGender.js';
 setGender();
+import {setBackImage} from './setBackImage.js';
+setBackImage(document.body);
 
 const theme = {
   0: 'first',
@@ -22,12 +24,6 @@ const theme = {
 document.body.setAttribute('class', theme[rand]);
 
 setInterval(() => {
-  if (window.innerWidth < window.innerHeight) {
-    document.body.style.backgroundImage = `url(${randVertBack})`;
-  } else {
-    document.body.style.backgroundImage = `url(${randBack})`;
-  }
-
   if (window.innerWidth < window.innerHeight / 1.5) {
     for (let i = 0; i < picsAmount; i++) {
       document.getElementsByClassName('letter')[i].style.transform =
