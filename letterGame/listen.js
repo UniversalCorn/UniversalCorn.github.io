@@ -36,8 +36,7 @@ if (document.referrer ===
 setInterval(() => {
   if (window.innerWidth < window.innerHeight) {
     document.body.style.backgroundImage = `url(${randVertBack})`;
-  }
-  else {
+  } else {
     document.body.style.backgroundImage = `url(${randBack})`;
   }
 
@@ -63,19 +62,19 @@ playB.onmousedown = playButton();
 
 let obj = {};
 for (let i = 0; i < picsAmount; i++) {
-      obj = document.createElement('div');
-      if (i < 6) {
-      	obj.innerText = String.fromCharCode(i + 1040) +
+  obj = document.createElement('div');
+  if (i < 6) {
+    obj.innerText = String.fromCharCode(i + 1040) +
 	String.fromCharCode(i + 1072);
-      } else if (i > 6) {
-	obj.innerText = String.fromCharCode(i + 1039) +
+  } else if (i > 6) {
+    obj.innerText = String.fromCharCode(i + 1039) +
 	String.fromCharCode(i + 1071);
-      } else {
-	obj.innerText = String.fromCharCode(1025) +
+  } else {
+    obj.innerText = String.fromCharCode(1025) +
 	String.fromCharCode(1105);
-      }
-      document.body.appendChild(obj);
-      obj.setAttribute('class', 'letter');
+  }
+  document.body.appendChild(obj);
+  obj.setAttribute('class', 'letter');
 }
 
 function playButton() {
@@ -111,5 +110,5 @@ backButton.onmousedown = goBack();
 
 for (let i = 1; i <= picsAmount; i++) {
   document.querySelectorAll('.letter')[i].onmousedown =
-  playAudio(sounds[i-1].replace(/^.*[\\\/]/, '').slice(0, -4) + genderStr);
+  playAudio(sounds[i - 1].replace(/^.*[\\\/]/, '').slice(0, -4) + genderStr);
 }
