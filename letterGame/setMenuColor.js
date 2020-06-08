@@ -1,4 +1,5 @@
 'use strict';
+import {rand} from './setBackAndRand.js';
 export let menuColor = '';
 export function setMenuColor() {
   const theme = {
