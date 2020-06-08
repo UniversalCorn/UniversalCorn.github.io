@@ -40,13 +40,6 @@ if (rand === 0) {
   document.body.setAttribute('class', 'fourth');
 }
 
-let genderStr = 'F.mp3';
-if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Male') {
-  genderStr = 'M.mp3';
-} else if (document.referrer === 'https://universalcorn.github.io/letterGame/main.html?gender=Female') {
-  genderStr = 'F.mp3';
-}
-
 const container = document.getElementById('container');
 
 setInterval(() => {
