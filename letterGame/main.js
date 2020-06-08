@@ -152,39 +152,6 @@ setInterval(() => {
 	menuArrow.offsetWidth / 2 + 'px';
   menuArrow.style.top = aside.offsetHeight / 2 -
 	menuArrow.offsetHeight / 2 + 'px';
- /* if (window.innerWidth < window.innerHeight) {
-    document.getElementsByClassName('main')[0].style.fontSize = '8vw';
-    document.getElementById('womanSpan').style.fontSize = '8vw';
-    document.getElementById('manSpan').style.fontSize = '8vw';
-    document.getElementsByClassName('innerTumbler')[0].style.flexDirection =
-    'column';
-    document.getElementsByClassName('innerTumbler')[0].style.alignItems =
-    'center';
-    document.getElementsByClassName('switch')[0].style.transform =
-    'rotate(90deg)';
-    document.getElementsByClassName('switch')[0].style.bottom = '0';
-    document.getElementsByClassName('check')[0].style.height = '45%';
-    document.getElementsByClassName('tumbler')[0].style.height = '45%';
-    document.getElementById('womanSpan').style.marginBottom = '5vw';
-    document.getElementById('manSpan').style.marginTop = '5vw';
-  } else {
-    document.getElementsByClassName('main')[0].style.fontSize = '5vw';
-    document.getElementById('womanSpan').style.fontSize = '3vw';
-    document.getElementById('manSpan').style.fontSize = '3vw';
-    document.getElementsByClassName('innerTumbler')[0].style.flexDirection =
-    'row';
-    document.getElementsByClassName('innerTumbler')[0].style.alignItems =
-    'center';
-    document.getElementsByClassName('switch')[0].style.transform =
-    'rotate(0deg)';
-    document.getElementsByClassName('switch')[0].style.bottom = '3vw';
-    document.getElementsByClassName('check')[0].style.height = '35%';
-    document.getElementsByClassName('tumbler')[0].style.height = '55%';
-    document.getElementById('womanSpan').style.marginTop = '0';
-    document.getElementById('womanSpan').style.marginBottom = '5vw';
-    document.getElementById('manSpan').style.marginTop = '0';
-    document.getElementById('manSpan').style.marginBottom = '5vw';
-  }*/
 }, 0);
 menuArrow.addEventListener('click', () => {
   menuArrow.style.pointerEvents = 'none';
