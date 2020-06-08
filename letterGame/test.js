@@ -24,6 +24,8 @@ currentSound.src = '';
 
 import {back, backVert, rand, randBack, randVertBack} from './setBackAndRand.js';
 import {menuColor, setMenuColor} from './setMenuColor.js';
+import {setBackImage} from './setBackImage.js';
+setBackImage(document.body);
 
 let genderStr = 'F.mp3';
 if (document.referrer.substr(document.referrer.length - 6) === 'r=Male') {
@@ -53,12 +55,10 @@ setInterval(() => {
   }
 
   if (window.innerWidth < window.innerHeight) {
-    document.body.style.backgroundImage = `url(${randVertBack})`;
     for (let i = 0; i < 33; i++) {
       document.getElementsByClassName('letter')[i].style.fontSize = '7vw';
     }
   } else {
-    document.body.style.backgroundImage = `url(${randBack})`;
     for (let i = 0; i < 33; i++) {
       document.getElementsByClassName('letter')[i].style.fontSize = '5vw';
     }
