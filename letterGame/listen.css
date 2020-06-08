@@ -21,7 +21,7 @@ body {
   font-size: 12vmin;
   padding: 0;
   user-select: none;
-  transform: scale(1.2);
+  transform: scale(3);
 }
 
 #play {
