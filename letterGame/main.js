@@ -19,11 +19,6 @@ headliner.style.left = -headliner.offsetWidth + 'px';
 setInterval(() => {
   headliner.style.top = window.innerHeight / 2 -
 	headliner.offsetHeight / 2 + 'px';
-  if (window.innerWidth < window.innerHeight) {
-    headliner.style.width = '60%';
-  } else {
-    headliner.style.width = '40%';
-  }
 }, 0);
 
 function moveOuter() {
