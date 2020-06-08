@@ -1,4 +1,5 @@
 'use strict';
+import {rand} from './setBackAndRand.js';
 export function setTheme(obj) {
   const theme = {
     0: 'first',
