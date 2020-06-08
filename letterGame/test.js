@@ -23,17 +23,7 @@ currentSound.preload = 'auto';
 currentSound.src = '';
 
 import {back, backVert, rand, randBack, randVertBack} from './setBackAndRand.js';
-
-let menuColor = '';
-if (rand === 0) {
-  menuColor = 'rgba(18, 42, 256, 0.8)';
-} else if (rand === 1) {
-  menuColor = 'rgba(256, 122, 138, 0.8)';
-} else if (rand === 2) {
-  menuColor = 'rgba(34, 136, 256, 0.8)';
-} else {
-  menuColor = 'rgba(82, 96, 256, 0.8)';
-}
+import {menuColor, setMenuColor} from './setMenuColor.js';
 
 let genderStr = 'F.mp3';
 if (document.referrer.substr(document.referrer.length - 6) === 'r=Male') {
