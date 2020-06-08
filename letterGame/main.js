@@ -16,10 +16,6 @@ const divisor = 250;
 
 headliner.style.background = 'rgba(256, 64, 64, 0.7)';
 headliner.style.left = -headliner.offsetWidth + 'px';
-setInterval(() => {
-  headliner.style.top = window.innerHeight / 2 -
-	headliner.offsetHeight / 2 + 'px';
-}, 0);
 
 function moveOuter() {
   const start = Date.now();
