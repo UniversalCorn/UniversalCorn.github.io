@@ -28,8 +28,15 @@ body {
 	width: 25vw;
 }
 
-#listen,#settings {
+#listen,
+#settings {
 	display: none;
+}
+
+#settings {
+	position: fixed;
+	right: 0.5vw;
+	bottom: 0.5vw;
 }
 
 #menu {
