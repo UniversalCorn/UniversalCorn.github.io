@@ -71,7 +71,7 @@ for (let i = 0; i < picsAmount; i++) {
 	obj.innerText = String.fromCharCode(i + 1039) +
 	String.fromCharCode(i + 1071);
       } else {
-	obj.innerText = String.fromCharCode(i + 1040)+
+	obj.innerText = String.fromCharCode(1025)+
 	String.fromCharCode(1105);
       }
       document.body.appendChild(obj);
