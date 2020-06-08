@@ -92,9 +92,6 @@ menuArrow.addEventListener('click', () => {
   }, window.innerWidth / 250);
   MoveRight();
 });
-settings.style.position = 'fixed';
-settings.style.right = '0.5vw';
-settings.style.bottom = '0.5vw';
 settings.addEventListener('click', () => {
   settings.style.display = 'none';
   menuArrow.style.pointerEvents = 'none';
