@@ -13,15 +13,13 @@ createLetters(picsAmount);
 import {genderStr, setGender} from './setGender.js';
 setGender();
 
-if (rand === 0) {
-  document.body.setAttribute('class', 'first');
-} else if (rand === 1) {
-  document.body.setAttribute('class', 'second');
-} else if (rand === 2) {
-  document.body.setAttribute('class', 'third');
-} else {
-  document.body.setAttribute('class', 'fourth');
-}
+const theme = {
+  0: 'first',
+  1: 'second',
+  2: 'third',
+  3: 'fourth',
+};
+document.body.setAttribute('class', theme[rand]);
 
 setInterval(() => {
   if (window.innerWidth < window.innerHeight) {
