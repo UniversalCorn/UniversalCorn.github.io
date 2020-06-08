@@ -24,21 +24,12 @@ const imageAmount = Object.keys(ratio).length;
 let imageTopPosition = 0;
 
 import {back, backVert, rand, randBack, randVertBack} from './setBackAndRand.js';
-
-if (rand === 0) {
-  document.body.setAttribute('class', 'first');
-} else if (rand === 1) {
-  document.body.setAttribute('class', 'second');
-} else if (rand === 2) {
-  document.body.setAttribute('class', 'third');
-} else {
-  document.body.setAttribute('class', 'fourth');
-}
-
 import {genderStr, setGender} from './setGender.js';
 setGender();
 import {setBackImage} from './setBackImage.js';
 setBackImage(document.body);
+import {setTheme} from './setTheme.js';
+setTheme(document.body);
 
 const container = document.getElementById('container');
 
