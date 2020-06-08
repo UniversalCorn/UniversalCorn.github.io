@@ -153,8 +153,6 @@ h4 {
 	background: rgba(256, 64, 64, 0.7);
 	font-size:  8vw;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
 	border-radius: 50px;
 	width: 60%;
 }
