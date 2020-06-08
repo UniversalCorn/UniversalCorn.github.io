@@ -7,6 +7,9 @@ const sounds = ['a.mp3', 'b.mp3', 'v.mp3', 'g.mp3', 'd.mp3', 'ye.mp3', 'yo.mp3',
 
 const picsAmount = 33;
 
+import {createLetters} from './createLetters.js';
+createLetters(picsAmount);
+
 const back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 const backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
 
