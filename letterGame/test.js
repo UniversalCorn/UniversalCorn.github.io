@@ -80,6 +80,9 @@ setInterval(() => {
   }
 }, 1);
 
+import {createLetters} from './createLetters.js';
+createLetters(picsAmount);
+
 const menu = document.getElementById('menu');
 menu.style.background = menuColor;
 const playB = document.getElementsByTagName('img')[0];
