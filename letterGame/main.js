@@ -10,16 +10,8 @@ const randVertBack = backVert[rand];
 
 const container = document.getElementById('container');
 
-let menuColor = '';
-if (rand === 0) {
-  menuColor = 'rgba(18, 42, 128, 0.9)';
-} else if (rand === 1) {
-  menuColor = 'rgba(128, 122, 138, 0.9)';
-} else if (rand === 2) {
-  menuColor = 'rgba(34, 136, 256, 0.9)';
-} else {
-  menuColor = 'rgba(82, 96, 256, 0.9)';
-}
+import {menuColor, setMenuColor} from './setMenuColor.js';
+setMenuColor();
 
 window.scrollTo(0, document.body.scrollHeight);
 
