@@ -40,6 +40,9 @@ if (rand === 0) {
   document.body.setAttribute('class', 'fourth');
 }
 
+import {genderStr, defineGender} from './defineGender.js';
+defineGender();
+
 const container = document.getElementById('container');
 
 setInterval(() => {
