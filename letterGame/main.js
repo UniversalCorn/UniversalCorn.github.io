@@ -1,15 +1,9 @@
 'use strict'
 const links = ['listen.html', 'test.html', 'guess.html'];
 
-const back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
-const backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
-
-const rand = Math.floor(Math.random() * back.length);
-const randBack = back[rand];
-const randVertBack = backVert[rand];
-
 const container = document.getElementById('container');
 
+import {back, backVert, rand, randBack, randVertBack} from './setBackAndRand.js';
 import {menuColor, setMenuColor} from './setMenuColor.js';
 setMenuColor();
 
