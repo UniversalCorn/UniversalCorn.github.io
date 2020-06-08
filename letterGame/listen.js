@@ -27,14 +27,8 @@ if (rand === 0) {
   document.body.setAttribute('class', 'fourth');
 }
 
-let genderStr = 'F.mp3';
-if (document.referrer ===
-'https://universalcorn.github.io/letterGame/main.html?gender=Male') {
-  genderStr = 'M.mp3';
-} else if (document.referrer ===
-'https://universalcorn.github.io/letterGame/main.html?gender=Female') {
-  genderStr = 'F.mp3';
-}
+import {genderStr, defineGender} from './defineGender.js';
+defineGender();
 
 setInterval(() => {
   if (window.innerWidth < window.innerHeight) {
