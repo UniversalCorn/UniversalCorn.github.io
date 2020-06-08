@@ -27,9 +27,6 @@ if (rand === 0) {
   document.body.setAttribute('class', 'fourth');
 }
 
-import {genderStr, defineGender} from './defineGender.js';
-defineGender();
-
 setInterval(() => {
   if (window.innerWidth < window.innerHeight) {
     document.body.style.backgroundImage = `url(${randVertBack})`;
