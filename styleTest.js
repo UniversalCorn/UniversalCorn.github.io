@@ -9,13 +9,6 @@ const span4 = ['L', 'A', 'Z', 'A', 'R', 'E', 'N', 'K', 'O'];
 document.getElementsByClassName('warning')[0].style.display = 'none';
 const para = document.getElementsByTagName('p')[0];
 const playB = document.getElementsByTagName('img')[0];
-setInterval(() => {
-  if (window.innerWidth < window.innerHeight) {
-    document.getElementsByClassName('warning')[0].style.display = 'flex';
-  } else {
-    document.getElementsByClassName('warning')[0].style.display = 'none';
-  }
-}, 0);
 
 function Transform(num, className, masName) {
   for (let i = 0; i < num; i++) {
