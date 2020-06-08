@@ -23,12 +23,7 @@ const ratio = {
 const imageAmount = Object.keys(ratio).length;
 let imageTopPosition = 0;
 
-const back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
-const backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
-
-const rand = Math.floor(Math.random() * back.length);
-const randBack = back[rand];
-const randVertBack = backVert[rand];
+import {back, backVert, rand, randBack, randVertBack} from './setBackAndRand.js';
 
 if (rand === 0) {
   document.body.setAttribute('class', 'first');
