@@ -17,20 +17,6 @@ setBackImage(document.body);
 import {setTheme} from './setTheme.js';
 setTheme(document.body);
 
-/*setInterval(() => {
-  if (window.innerWidth < window.innerHeight / 1.5) {
-    for (let i = 0; i < picsAmount; i++) {
-      document.getElementsByClassName('letter')[i].style.transform =
-	'scale(1.2)';
-    }
-  } else {
-    for (let i = 0; i < picsAmount; i++) {
-      document.getElementsByClassName('letter')[i].style.transform =
-	'scale(1)';
-    }
-  }
-}, 1);*/
-
 const audioStart = new Audio();
 audioStart.preload = 'auto';
 audioStart.src = 'нажми' + genderStr;
