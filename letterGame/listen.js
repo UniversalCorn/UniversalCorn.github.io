@@ -9,6 +9,8 @@ const picsAmount = 33;
 
 import {createLetters} from './createLetters.js';
 createLetters(picsAmount);
+import {genderStr, defineGender} from './defineGender.js';
+defineGender();
 
 const back = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
 const backVert = ['b1vert.jpg', 'b2vert.jpg', 'b3vert.jpg', 'b4vert.jpg'];
@@ -26,9 +28,6 @@ if (rand === 0) {
 } else {
   document.body.setAttribute('class', 'fourth');
 }
-
-import {genderStr, defineGender} from './defineGender.js';
-defineGender();
 
 setInterval(() => {
   if (window.innerWidth < window.innerHeight) {
