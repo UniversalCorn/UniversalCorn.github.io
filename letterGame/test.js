@@ -159,9 +159,6 @@ function DrawRight(timePassed) {
 }
 
 const listen = document.getElementById('listen');
-listen.style.position = 'fixed';
-listen.style.left = '0.5vw';
-listen.style.bottom = '0.5vw';
 listen.addEventListener('click', () => {
   currentSound.play();
 });
