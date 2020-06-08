@@ -27,8 +27,7 @@ body {
 }
 
 #settings {
-	width: 15vw;
-	height: 15vw;
+	width: 15vmin; height: 15vmin;
 }
 
 #container,
@@ -209,10 +208,6 @@ img:hover {
 @media screen and (orientation: landscape) {
 	#container {
 		flex-direction: row;
-	}
-	#settings {
-		width: 8vw;
-		height: 8vw;
 	}
 	.main {
 		font-size: 5vw;
