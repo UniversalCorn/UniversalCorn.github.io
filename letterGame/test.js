@@ -24,6 +24,7 @@ currentSound.src = '';
 
 import {back, backVert, rand, randBack, randVertBack} from './setBackAndRand.js';
 import {menuColor, setMenuColor} from './setMenuColor.js';
+setMenuColor();
 import {setBackImage} from './setBackImage.js';
 setBackImage(document.body);
 
