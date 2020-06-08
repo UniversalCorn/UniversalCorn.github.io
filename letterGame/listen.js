@@ -14,14 +14,8 @@ import {genderStr, setGender} from './setGender.js';
 setGender();
 import {setBackImage} from './setBackImage.js';
 setBackImage(document.body);
-
-const theme = {
-  0: 'first',
-  1: 'second',
-  2: 'third',
-  3: 'fourth',
-};
-document.body.setAttribute('class', theme[rand]);
+import {setTheme} from './setTheme.js';
+setTheme(document.body);
 
 setInterval(() => {
   if (window.innerWidth < window.innerHeight / 1.5) {
