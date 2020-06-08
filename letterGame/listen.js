@@ -17,7 +17,7 @@ setBackImage(document.body);
 import {setTheme} from './setTheme.js';
 setTheme(document.body);
 
-setInterval(() => {
+/*setInterval(() => {
   if (window.innerWidth < window.innerHeight / 1.5) {
     for (let i = 0; i < picsAmount; i++) {
       document.getElementsByClassName('letter')[i].style.transform =
@@ -29,7 +29,7 @@ setInterval(() => {
 	'scale(1)';
     }
   }
-}, 1);
+}, 1);*/
 
 const audioStart = new Audio();
 audioStart.preload = 'auto';
