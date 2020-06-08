@@ -344,12 +344,7 @@ function Question() {
       const getBack = document.createElement('img');
       panel.appendChild(getBack);
       getBack.src = 'back.png';
-      getBack.style.position = 'relative';
-      setInterval(() => {
-        getBack.style.width = '40%';
-        getBack.style.height = '40%';
-        getBack.style.top = '15%';
-      }, 0);
+      getBack.setAttribute('id', 'getBack');
       getBack.addEventListener('click', () => {
         window.history.go(-1);
       });
