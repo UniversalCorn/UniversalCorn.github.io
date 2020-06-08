@@ -152,7 +152,7 @@ setInterval(() => {
 	menuArrow.offsetWidth / 2 + 'px';
   menuArrow.style.top = aside.offsetHeight / 2 -
 	menuArrow.offsetHeight / 2 + 'px';
-  if (window.innerWidth < window.innerHeight) {
+ /* if (window.innerWidth < window.innerHeight) {
     document.getElementsByClassName('main')[0].style.fontSize = '8vw';
     document.getElementById('womanSpan').style.fontSize = '8vw';
     document.getElementById('manSpan').style.fontSize = '8vw';
@@ -184,7 +184,7 @@ setInterval(() => {
     document.getElementById('womanSpan').style.marginBottom = '5vw';
     document.getElementById('manSpan').style.marginTop = '0';
     document.getElementById('manSpan').style.marginBottom = '5vw';
-  }
+  }*/
 }, 0);
 menuArrow.addEventListener('click', () => {
   menuArrow.style.pointerEvents = 'none';
