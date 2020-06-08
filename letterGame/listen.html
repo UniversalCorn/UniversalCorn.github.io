@@ -8,6 +8,10 @@
 		<link type = "text/css" rel = "stylesheet" href = "listen.css">
 		<link type = "text/css" rel = "stylesheet" href = "scrollBar.css">
 		<script src = 'jquery.min.js'> </script>
+		<script type = 'module'>
+			import {createLetters} from './createLetters.js';
+			createLetters(picsAmount);
+		</script>
 	</head>
 	<body>
 		<img class = 'letter' src = 'back.png' id = 'back'>
