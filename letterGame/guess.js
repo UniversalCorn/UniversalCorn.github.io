@@ -40,8 +40,8 @@ if (rand === 0) {
   document.body.setAttribute('class', 'fourth');
 }
 
-import {genderStr, defineGender} from './defineGender.js';
-defineGender();
+import {genderStr, setGender} from './setGender.js';
+setGender();
 
 const container = document.getElementById('container');
 
