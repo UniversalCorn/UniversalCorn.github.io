@@ -52,6 +52,11 @@ body {
 	z-index: 10;
 }
 
+#getBack {
+	position: relative;
+	width: 60%; height: 60%;
+}
+
 img,div:hover {
 	cursor: pointer;
 }
