@@ -166,8 +166,6 @@ checkAudio.preload = 'auto';
 checkAudio.src = 'check.mp3';
 
 const listen = document.getElementById('listen');
-listen.style.width = '8vw';
-listen.style.height = listen.style.width;
 listen.addEventListener('click', () => {
   checkAudio.play();
 });
