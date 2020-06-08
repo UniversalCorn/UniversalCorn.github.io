@@ -42,6 +42,6 @@ img,div:hover {
 
 @media screen and (min-aspect-ratio: ~'2/3') {
 	.letter {
-		transform: scalse(1);
+		transform: scale(1);
 	}
 }
