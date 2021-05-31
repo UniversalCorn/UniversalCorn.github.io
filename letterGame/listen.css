@@ -1,0 +1,40 @@
+html,body { 
+	margin: 0; 
+	padding: 0; 
+	height: 100%; 
+	width: 100%;
+}
+
+body {
+	background-attachment: fixed;
+	background-size: cover;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+  text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
+}
+
+.letter {
+  display: none;
+  margin: 5vw;
+  font-size: 12vmin;
+  padding: 0;
+  user-select: none;
+}
+
+#play {
+	position: absolute;
+	width: 25vw;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#back {
+	width: 10vw;
+}
+
+img,div:hover {
+  cursor: pointer;
+}

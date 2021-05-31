@@ -1,0 +1,70 @@
+html,body { 
+	margin: 0; 
+	padding: 0; 
+	height: 100%; 
+	width: 100%;
+}
+
+body {
+	position: fixed;
+	background-attachment: fixed;
+	background-size: cover;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
+}
+
+.letter {
+ 	display: none;
+  	margin: -5vw 5vw;
+  	user-select: none;
+  	width: auto;
+}
+
+#play {
+	position: fixed;
+	width: 25vw;
+}
+
+#listen,
+#settings {
+	display: none;
+	position: fixed;
+	bottom: 0.5vw;
+}
+
+#listen {
+	left: 0.5vw;
+}
+
+#settings {
+	right: 0.5vw;
+}
+
+#menu {
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 10;
+}
+
+#getBack {
+	position: relative;
+	width: 60%; height: 60%;
+}
+
+img,div:hover {
+	cursor: pointer;
+}
+
+#menu:hover {
+	cursor: default;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

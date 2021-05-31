@@ -1,0 +1,27 @@
+{
+  "name": "styletest",
+  "version": "1.0.0",
+  "description": "Kursach",
+  "main": "styleTest.js",
+  "scripts": {
+    "test": "styleTest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniversalCorn/UniversalCorn.github.io.git"
+  },
+  "keywords": [
+    "styleTest",
+    "js"
+  ],
+  "author": "Nikita Lazarenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UniversalCorn/UniversalCorn.github.io/issues"
+  },
+  "homepage": "https://github.com/UniversalCorn/UniversalCorn.github.io#readme",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}

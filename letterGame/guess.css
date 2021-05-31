@@ -1,0 +1,40 @@
+html,body { 
+	margin: 0; 
+	padding: 0; 
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	flex-direction: column;
+	justify-content: center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: black;
+	text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
+}
+
+#container {
+
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0; 
+	padding: 0; 
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+img {
+	margin: 3vw 0vw;
+	/*flex: 0 1 9vw;*/
+}
+
+#inner:hover {
+	cursor: default;
+}
+
+img:hover {
+	cursor: pointer;
+}

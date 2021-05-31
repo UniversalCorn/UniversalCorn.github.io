@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html dir = 'ltr'>
+	<head>
+		<title> Главная </title>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link type = "text/css" rel = "stylesheet" href = "https://marksheet.io/css/reset.css">
+		<link type = "text/css" rel = "stylesheet" href = "main.css">
+		<script src = 'jquery.min.js'> </script>
+	</head>
+	<body>
+
+		<div id = 'container'>
+			<img src= 'listenMain.png' class = 'mainImage'>
+			<img src = 'testMain.png' class = 'mainImage'>
+			<img src = 'guess.png' class = 'mainImage'>
+
+			<img src = 'settings.png' id = 'settings'>
+		</div>
+
+		<div id = 'menu'>
+			<div class="aside">
+				<img src = 'arrowRight.png' id = 'menuArrow'>
+			</div>
+			<div class = 'main'>
+				<h2> Настройки </h2>
+				<hr>
+				<div class = 'check'>
+					<div class = 'innerCheck'>
+						<span id = 'listenSpan'> Проверить звук: </span>
+						<img src = 'listen.png' id = 'listen'>
+					</div>
+				</div>
+				<hr>
+				<div class = 'tumbler'>
+					<h4> Голос </h4>
+					<div class = "innerTumbler">
+						<span id = 'womanSpan'> Женский </span>
+						<label class="switch">
+				  			<input type="checkbox">
+				  			<span class="slider"></span>
+						</label>
+						<span id = 'manSpan'> Мужской </span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id = 'headliner'>
+			<span id = 'text'> Включи звук </span>
+		</div>
+
+	<script type="module" src="main.js"></script>
+	</body>
+</html>
